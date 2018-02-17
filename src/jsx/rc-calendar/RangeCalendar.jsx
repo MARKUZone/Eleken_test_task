@@ -622,9 +622,6 @@ const RangeCalendar = createReactClass({
             ) : null}
           </div>
         </div>
-        <div>
-          <RangeCounter in={this.startValue} out={this.endValue} />
-        </div>
       </div>
     );
   },

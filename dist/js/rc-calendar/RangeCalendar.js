@@ -560,7 +560,7 @@ var RangeCalendar = (0, _createReactClass2.default)({
     var endValue = this.getEndValue();
 
     console.log("state.value[0-1] = " + state.value);
-    console.log("placeholder1 = " + placeholder1 + "\n" + "placeholder2 = " + placeholder2);
+    console.log("startValue = " + startValue + "\n" + "endValue = " + endValue);
 
     var todayTime = (0, _util.getTodayTime)(startValue);
     var thisMonth = todayTime.month();
@@ -661,11 +661,6 @@ var RangeCalendar = (0, _createReactClass2.default)({
             })) : null
           ) : null
         )
-      ),
-      _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_RangeCounter2.default, { 'in': this.startValue, out: this.endValue })
       )
     );
   }

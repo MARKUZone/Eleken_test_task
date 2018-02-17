@@ -21,12 +21,7 @@ function RangeCounter(props) {
     _react2.default.createElement(
       'p',
       null,
-      props.in
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      props.out
+      props.fullDate
     )
   );
 }

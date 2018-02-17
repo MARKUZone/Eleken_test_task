@@ -26,6 +26,10 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _RangeCounter = require('../../dist/js/rc-calendar/RangeCounter');
+
+var _RangeCounter2 = _interopRequireDefault(_RangeCounter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Calc = function Calc() {
@@ -37,7 +41,10 @@ var Calc = function Calc() {
 			null,
 			'This is Calculator page'
 		),
-		_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default })
+		_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default, onChange: function onChange(e) {
+				alert('Change smthn');
+			} }),
+		_react2.default.createElement(_RangeCounter2.default, null)
 	);
 };
 
