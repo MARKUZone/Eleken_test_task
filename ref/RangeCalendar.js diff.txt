@@ -1,0 +1,7 @@
+RangeCalendar.jsx diff with the original RangeCalendar.js
+
+line 12 	import RangeCounter from '../../../dist/js/rc-calendar/RangeCounter';
+
+line 618	<div>
+          		<RangeCounter in={this.startValue} out={this.endValue} />
+        	</div>

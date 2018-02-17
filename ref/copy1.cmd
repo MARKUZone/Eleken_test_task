@@ -1,0 +1,1 @@
+copy ..\..\dist\js\rc-calendar\RangeCalendar.js ..\..\node_modules\rc-calendar\lib\RangeCalendar.js
