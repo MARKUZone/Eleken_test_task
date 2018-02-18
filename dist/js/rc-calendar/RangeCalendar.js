@@ -50,15 +50,13 @@ var _CommonMixin2 = _interopRequireDefault(_CommonMixin);
 
 var _util = require('./util/');
 
-var _RangeCounter = require('../../../dist/js/rc-calendar/RangeCounter');
-
-var _RangeCounter2 = _interopRequireDefault(_RangeCounter);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+//import RangeCounter from '../../../dist/js/rc-calendar/RangeCounter';
 
 function noop() {}
 
@@ -234,14 +232,14 @@ var RangeCalendar = (0, _createReactClass2.default)({
       }
     } else if (type === 'start') {
       (0, _util.syncTime)(prevSelectedValue[0], value);
-      var endValue = selectedValue[1];
-      nextSelectedValue = endValue && this.compare(endValue, value) > 0 ? [value, endValue] : [value];
+      var _endValue = selectedValue[1];
+      nextSelectedValue = _endValue && this.compare(_endValue, value) > 0 ? [value, _endValue] : [value];
     } else {
       // type === 'end'
-      var startValue = selectedValue[0];
-      if (startValue && this.compare(startValue, value) <= 0) {
+      var _startValue = selectedValue[0];
+      if (_startValue && this.compare(_startValue, value) <= 0) {
         (0, _util.syncTime)(prevSelectedValue[1], value);
-        nextSelectedValue = [startValue, value];
+        nextSelectedValue = [_startValue, value];
       } else {
         (0, _util.syncTime)(prevSelectedValue[0], value);
         nextSelectedValue = [value];
@@ -456,11 +454,11 @@ var RangeCalendar = (0, _createReactClass2.default)({
 
     // 尚未选择过时间，直接输入的话
     if (!this.state.selectedValue[0] || !this.state.selectedValue[1]) {
-      var startValue = selectedValue[0] || (0, _moment2.default)();
-      var endValue = selectedValue[1] || startValue.clone().add(1, 'months');
+      var _startValue2 = selectedValue[0] || (0, _moment2.default)();
+      var _endValue2 = selectedValue[1] || _startValue2.clone().add(1, 'months');
       this.setState({
         selectedValue: selectedValue,
-        value: getValueFromSelectedValue([startValue, endValue])
+        value: getValueFromSelectedValue([_startValue2, _endValue2])
       });
     }
 
@@ -556,11 +554,8 @@ var RangeCalendar = (0, _createReactClass2.default)({
     var showOkButton = showOk === true || showOk !== false && !!timePicker;
     var cls = (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, prefixCls + '-footer', true), _defineProperty(_classnames, prefixCls + '-range-bottom', true), _defineProperty(_classnames, prefixCls + '-footer-show-ok', showOkButton), _classnames));
 
-    var startValue = this.getStartValue();
-    var endValue = this.getEndValue();
-
-    console.log("state.value[0-1] = " + state.value);
-    console.log("startValue = " + startValue + "\n" + "endValue = " + endValue);
+    var nikValue = "some text string from RangeCalendar";
+    console.log("state.value = " + state.value);
 
     var todayTime = (0, _util.getTodayTime)(startValue);
     var thisMonth = todayTime.month();

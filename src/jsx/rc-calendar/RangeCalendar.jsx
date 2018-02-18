@@ -9,7 +9,7 @@ import OkButton from './calendar/OkButton';
 import TimePickerButton from './calendar/TimePickerButton';
 import CommonMixin from './mixin/CommonMixin';
 import { syncTime, getTodayTime, isAllowedDate } from './util/';
-import RangeCounter from '../../../dist/js/rc-calendar/RangeCounter';
+//import RangeCounter from '../../../dist/js/rc-calendar/RangeCounter';
 
 function noop() {}
 
@@ -506,13 +506,10 @@ const RangeCalendar = createReactClass({
       [`${prefixCls}-footer-show-ok`]: showOkButton,
     });
 
-    const startValue = this.getStartValue();
-    const endValue = this.getEndValue();
 
 
-
-    console.log("state.value[0-1] = " + state.value);
-    console.log("startValue = " + startValue + "\n" + "endValue = " + endValue);
+    const nikValue = "some text string from RangeCalendar";
+    console.log("state.value = " + state.value);
 
 
 

@@ -4,7 +4,7 @@ import createReactClass from 'create-react-class';
 function RangeCounter(props){
   return (
     <div className="range-counter">
-      <p>{props.fullDate}</p>
+      <p>{props.nVal}</p>
     </div>
   )
 }
