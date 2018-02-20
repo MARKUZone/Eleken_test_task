@@ -41788,9 +41788,15 @@ var Calc = function (_React$Component) {
 				),
 				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default
 					//<!--	onChange = {(value) => {console.log(value)}} -->
-					, onClick: this.getNikValue
+					, onChange: this.getNikValue
 				}),
-				_react2.default.createElement(_RangeCounter2.default, { nVal: 'this.state.nikValue' })
+				_react2.default.createElement(_RangeCounter2.default, { nVal: 'this.state.nikValue' }),
+				_react2.default.createElement(
+					'p',
+					null,
+					'My Range must be here: ',
+					this.state.nikValue
+				)
 			);
 		}
 	}]);
