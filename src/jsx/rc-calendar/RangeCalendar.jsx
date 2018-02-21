@@ -408,6 +408,13 @@ const RangeCalendar = createReactClass({
       this.fireHoverValueChange(selectedValue.concat());
     }
     this.props.onChange(selectedValue);
+
+
+
+    console.log("selectedValue = " + this.props.onChange);
+
+
+
     if (direct || selectedValue[0] && selectedValue[1]) {
       this.setState({
         prevSelectedValue: selectedValue,
@@ -506,13 +513,8 @@ const RangeCalendar = createReactClass({
       [`${prefixCls}-footer-show-ok`]: showOkButton,
     });
 
-
-
-    const nikValue = "some text string from RangeCalendar";
-    console.log("state.value = " + state.value);
-
-
-
+    const startValue = this.getStartValue();
+    const endValue = this.getEndValue();
     const todayTime = getTodayTime(startValue);
     const thisMonth = todayTime.month();
     const thisYear = todayTime.year();
@@ -522,6 +524,21 @@ const RangeCalendar = createReactClass({
     const nextMonthOfStart = startValue.clone().add(1, 'months');
     const isClosestMonths = nextMonthOfStart.year() === endValue.year() &&
             nextMonthOfStart.month() === endValue.month();
+
+
+
+    // My test lines:
+
+    //const nikValue = "some text string from RangeCalendar";
+    //console.log("nikValue = " + nikValue); // string is ok and revealed in console
+    //console.log("state.value = " + state.value);
+    //console.log("selectedValue = " + state.selectedValue);
+    //console.log("value = " + value); // value is not defined - ERROR
+
+    // End of my test lines
+
+
+
     return (
       <div
         ref={this.saveRoot}
