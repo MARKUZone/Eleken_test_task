@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import 'rc-calendar/assets/index.css';
 import Picker from 'rc-calendar/lib/Picker';
 import ruRU from 'rc-calendar/lib/locale/ru_RU';
-import RangeCalendar from '../../node_modules/rc-calendar/lib/RangeCalendar';
+import RangeCalendar from 'rc-calendar/lib/RangeCalendar';
 import RangeCounter from '../../dist/js/rc-calendar/RangeCounter';
 
 
@@ -24,9 +24,9 @@ class Calc extends React.Component {
 		return (
 			<div>
 				<h2>This is Calculator page</h2>
-				<RangeCalendar 	locale={ruRU} 
-						//<!--	onChange = {(value) => {console.log(value)}} -->
-								onChange = {this.getNikValue}
+				<RangeCalendar 	locale={ruRU}
+								//<!--	onChange = {(value) => {console.log(value)}} -->
+								//<!--	onSelect = {this.getNikValue} -->
 				/>
 				<RangeCounter nVal="this.state.nikValue" />
 				<p>My Range must be here: {this.state.nikValue}</p>

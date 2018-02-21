@@ -24,7 +24,7 @@ var _ru_RU = require('rc-calendar/lib/locale/ru_RU');
 
 var _ru_RU2 = _interopRequireDefault(_ru_RU);
 
-var _RangeCalendar = require('../../node_modules/rc-calendar/lib/RangeCalendar');
+var _RangeCalendar = require('rc-calendar/lib/RangeCalendar');
 
 var _RangeCalendar2 = _interopRequireDefault(_RangeCalendar);
 
@@ -73,7 +73,7 @@ var Calc = function (_React$Component) {
 				),
 				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default
 					//<!--	onChange = {(value) => {console.log(value)}} -->
-					, onChange: this.getNikValue
+					//<!--	onSelect = {this.getNikValue} -->
 				}),
 				_react2.default.createElement(_RangeCounter2.default, { nVal: 'this.state.nikValue' }),
 				_react2.default.createElement(

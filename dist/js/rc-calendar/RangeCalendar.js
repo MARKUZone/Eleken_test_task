@@ -232,14 +232,14 @@ var RangeCalendar = (0, _createReactClass2.default)({
       }
     } else if (type === 'start') {
       (0, _util.syncTime)(prevSelectedValue[0], value);
-      var _endValue = selectedValue[1];
-      nextSelectedValue = _endValue && this.compare(_endValue, value) > 0 ? [value, _endValue] : [value];
+      var endValue = selectedValue[1];
+      nextSelectedValue = endValue && this.compare(endValue, value) > 0 ? [value, endValue] : [value];
     } else {
       // type === 'end'
-      var _startValue = selectedValue[0];
-      if (_startValue && this.compare(_startValue, value) <= 0) {
+      var startValue = selectedValue[0];
+      if (startValue && this.compare(startValue, value) <= 0) {
         (0, _util.syncTime)(prevSelectedValue[1], value);
-        nextSelectedValue = [_startValue, value];
+        nextSelectedValue = [startValue, value];
       } else {
         (0, _util.syncTime)(prevSelectedValue[0], value);
         nextSelectedValue = [value];
@@ -454,11 +454,11 @@ var RangeCalendar = (0, _createReactClass2.default)({
 
     // 尚未选择过时间，直接输入的话
     if (!this.state.selectedValue[0] || !this.state.selectedValue[1]) {
-      var _startValue2 = selectedValue[0] || (0, _moment2.default)();
-      var _endValue2 = selectedValue[1] || _startValue2.clone().add(1, 'months');
+      var startValue = selectedValue[0] || (0, _moment2.default)();
+      var endValue = selectedValue[1] || startValue.clone().add(1, 'months');
       this.setState({
         selectedValue: selectedValue,
-        value: getValueFromSelectedValue([_startValue2, _endValue2])
+        value: getValueFromSelectedValue([startValue, endValue])
       });
     }
 
@@ -467,6 +467,9 @@ var RangeCalendar = (0, _createReactClass2.default)({
       this.fireHoverValueChange(selectedValue.concat());
     }
     this.props.onChange(selectedValue);
+
+    console.log("selectedValue = " + this.props.onChange);
+
     if (direct || selectedValue[0] && selectedValue[1]) {
       this.setState({
         prevSelectedValue: selectedValue,
@@ -554,15 +557,26 @@ var RangeCalendar = (0, _createReactClass2.default)({
     var showOkButton = showOk === true || showOk !== false && !!timePicker;
     var cls = (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, prefixCls + '-footer', true), _defineProperty(_classnames, prefixCls + '-range-bottom', true), _defineProperty(_classnames, prefixCls + '-footer-show-ok', showOkButton), _classnames));
 
-    var nikValue = "some text string from RangeCalendar";
-    console.log("state.value = " + state.value);
-
+    var startValue = this.getStartValue();
+    var endValue = this.getEndValue();
     var todayTime = (0, _util.getTodayTime)(startValue);
     var thisMonth = todayTime.month();
     var thisYear = todayTime.year();
     var isTodayInView = startValue.year() === thisYear && startValue.month() === thisMonth || endValue.year() === thisYear && endValue.month() === thisMonth;
     var nextMonthOfStart = startValue.clone().add(1, 'months');
     var isClosestMonths = nextMonthOfStart.year() === endValue.year() && nextMonthOfStart.month() === endValue.month();
+
+    // My test lines:
+
+    //const nikValue = "some text string from RangeCalendar";
+    //console.log("nikValue = " + nikValue); // string is ok and revealed in console
+    //console.log("state.value = " + state.value);
+    //console.log("selectedValue = " + state.selectedValue);
+    //console.log("value = " + value); // value is not defined - ERROR
+
+    // End of my test lines
+
+
     return _react2.default.createElement(
       'div',
       {
