@@ -71,8 +71,10 @@ var Calc = function (_React$Component) {
 					null,
 					'This is Calculator page'
 				),
-				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default
-					//<!--	onChange = {(value) => {console.log(value)}} -->
+				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default,
+					onChange: function onChange(value) {
+						console.log(value);
+					}
 					//<!--	onSelect = {this.getNikValue} -->
 				}),
 				_react2.default.createElement(_RangeCounter2.default, { nVal: 'this.state.nikValue' }),

@@ -21,7 +21,9 @@ function RangeCounter(props) {
     _react2.default.createElement(
       'p',
       null,
-      props.nVal
+      'This is special value: ',
+      props.nVal,
+      '.'
     )
   );
 }

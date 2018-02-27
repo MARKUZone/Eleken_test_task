@@ -41786,8 +41786,10 @@ var Calc = function (_React$Component) {
 					null,
 					'This is Calculator page'
 				),
-				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default
-					//<!--	onChange = {(value) => {console.log(value)}} -->
+				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default,
+					onChange: function onChange(value) {
+						console.log(value);
+					}
 					//<!--	onSelect = {this.getNikValue} -->
 				}),
 				_react2.default.createElement(_RangeCounter2.default, { nVal: 'this.state.nikValue' }),
@@ -49206,7 +49208,10 @@ var RangeCalendar = (0, _createReactClass2.default)({
     }
     this.props.onChange(selectedValue);
 
-    console.log("selectedValue = " + this.props.onChange);
+    // ------------------   My test lines
+    console.log("selectedValue = " + selectedValue);
+    // ------------------   End of test lines
+
 
     if (direct || selectedValue[0] && selectedValue[1]) {
       this.setState({
@@ -51802,7 +51807,9 @@ function RangeCounter(props) {
     _react2.default.createElement(
       'p',
       null,
-      props.nVal
+      'This is special value: ',
+      props.nVal,
+      '.'
     )
   );
 }

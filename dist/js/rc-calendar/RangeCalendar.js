@@ -468,7 +468,10 @@ var RangeCalendar = (0, _createReactClass2.default)({
     }
     this.props.onChange(selectedValue);
 
-    console.log("selectedValue = " + this.props.onChange);
+    // ------------------   My test lines
+    console.log("selectedValue = " + selectedValue);
+    // ------------------   End of test lines
+
 
     if (direct || selectedValue[0] && selectedValue[1]) {
       this.setState({

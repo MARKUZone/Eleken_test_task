@@ -25,7 +25,7 @@ class Calc extends React.Component {
 			<div>
 				<h2>This is Calculator page</h2>
 				<RangeCalendar 	locale={ruRU}
-								//<!--	onChange = {(value) => {console.log(value)}} -->
+								onChange = {(value) => {console.log(value)}}
 								//<!--	onSelect = {this.getNikValue} -->
 				/>
 				<RangeCounter nVal="this.state.nikValue" />

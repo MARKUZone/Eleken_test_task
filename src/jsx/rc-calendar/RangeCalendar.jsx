@@ -411,7 +411,11 @@ const RangeCalendar = createReactClass({
 
 
 
-    console.log("selectedValue = " + this.props.onChange);
+
+// ------------------   My test lines
+    console.log("selectedValue = " + selectedValue);
+// ------------------   End of test lines
+
 
 
 
