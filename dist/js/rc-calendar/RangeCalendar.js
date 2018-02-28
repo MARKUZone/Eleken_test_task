@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.myTestVar = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -53,9 +52,9 @@ var _CommonMixin2 = _interopRequireDefault(_CommonMixin);
 
 var _util = require('./util/');
 
-var _calc = require('../../../dist/js/calc');
+var _myPrinter = require('../../../dist/js/myPrinter');
 
-var _calc2 = _interopRequireDefault(_calc);
+var _myPrinter2 = _interopRequireDefault(_myPrinter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -476,12 +475,11 @@ var RangeCalendar = (0, _createReactClass2.default)({
     this.props.onChange(selectedValue);
 
     // ------------------   My test lines
-    console.log("selectedValue = " + selectedValue);
+    /*console.log("selectedValue = " + selectedValue);
     console.log("selectedValue[0] = " + selectedValue[0]);
     console.log("this.state.selectedValue = " + this.state.selectedValue);
-    console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);
-    console.log("starting myPrinter array...");
-    (0, _calc2.default)([selectedValue, selectedValue[0], this.state.selectedValue, this.state.selectedValue[0]]);
+    console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);*/
+    (0, _myPrinter2.default)([selectedValue, selectedValue[0], this.state.selectedValue, this.state.selectedValue[0]]);
     // ------------------   End of test lines
 
 
@@ -691,4 +689,4 @@ var RangeCalendar = (0, _createReactClass2.default)({
 });
 
 exports.default = RangeCalendar;
-exports.myTestVar = myTestVar;
+//export {myTestVar};

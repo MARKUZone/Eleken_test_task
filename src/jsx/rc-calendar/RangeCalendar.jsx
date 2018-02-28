@@ -10,7 +10,7 @@ import TimePickerButton from './calendar/TimePickerButton';
 import CommonMixin from './mixin/CommonMixin';
 import { syncTime, getTodayTime, isAllowedDate } from './util/';
 //import RangeCounter from '../../../dist/js/rc-calendar/RangeCounter';
-import myPrinter from '../../../dist/js/calc';
+import myPrinter from '../../../dist/js/myPrinter';
 
 
 var myTestVar = "Test var is working!";
@@ -417,11 +417,10 @@ const RangeCalendar = createReactClass({
 
 
 // ------------------   My test lines
-    console.log("selectedValue = " + selectedValue);
+    /*console.log("selectedValue = " + selectedValue);
     console.log("selectedValue[0] = " + selectedValue[0]);
     console.log("this.state.selectedValue = " + this.state.selectedValue);
-    console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);
-    console.log("starting myPrinter array...");
+    console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);*/
     myPrinter([selectedValue, selectedValue[0], this.state.selectedValue, this.state.selectedValue[0]]);
 // ------------------   End of test lines
 
@@ -655,4 +654,4 @@ const RangeCalendar = createReactClass({
 });
 
 export default RangeCalendar;
-export {myTestVar};
+//export {myTestVar};
