@@ -20,7 +20,11 @@ class Calc extends React.Component {
 	getRange(input) {
 		//console.log( input[0]._d.toString() , typeof(input[0]._d.toString()) );
 		this.setState( { date1: input[0]._d.toString() } );
-		this.setState( { date2: input[1]._d.toString() } );
+		if (prevState.date1 != this.state.date1) {
+			this.setState( { date2: "no value" } );
+		} else {
+			this.setState( { date2: input[1]._d.toString() } );
+		}
 	}
 
 	render() {
@@ -34,7 +38,6 @@ class Calc extends React.Component {
 				<RangeCounter 
 					date1={this.state.date1} 
 					date2={this.state.date2} 
-					onChange={ () => onChanges }
 				/>
 				{/*<p>Calc this.state.date1: {this.state.date1}</p>
 				<p>Calc this.state.date2: {this.state.date2}</p>*/}

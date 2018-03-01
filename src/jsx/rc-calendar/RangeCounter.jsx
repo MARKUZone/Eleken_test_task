@@ -12,10 +12,6 @@ class RangeCounter extends React.Component {
 		}
 	}
 
-	onChanges() {
-		alert("Changes detected!");
-	}
-
 	render() {
 		return (
 			<div className="range-counter">

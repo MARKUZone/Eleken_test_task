@@ -39,11 +39,6 @@ var RangeCounter = function (_React$Component) {
 	}
 
 	_createClass(RangeCounter, [{
-		key: 'onChanges',
-		value: function onChanges() {
-			alert("Changes detected!");
-		}
-	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(

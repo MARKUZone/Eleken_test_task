@@ -41774,7 +41774,11 @@ var Calc = function (_React$Component) {
 		value: function getRange(input) {
 			//console.log( input[0]._d.toString() , typeof(input[0]._d.toString()) );
 			this.setState({ date1: input[0]._d.toString() });
-			this.setState({ date2: input[1]._d.toString() });
+			if (prevState.date1 != this.state.date1) {
+				this.setState({ date2: "no value" });
+			} else {
+				this.setState({ date2: input[1]._d.toString() });
+			}
 		}
 	}, {
 		key: 'render',
@@ -41797,10 +41801,7 @@ var Calc = function (_React$Component) {
 				}),
 				_react2.default.createElement(_RangeCounter2.default, {
 					date1: this.state.date1,
-					date2: this.state.date2,
-					onChange: function onChange() {
-						return onChanges;
-					}
+					date2: this.state.date2
 				})
 			);
 		}
@@ -51868,11 +51869,6 @@ var RangeCounter = function (_React$Component) {
 	}
 
 	_createClass(RangeCounter, [{
-		key: 'onChanges',
-		value: function onChanges() {
-			alert("Changes detected!");
-		}
-	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
