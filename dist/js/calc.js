@@ -49,20 +49,25 @@ var Calc = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (Calc.__proto__ || Object.getPrototypeOf(Calc)).call(this, props));
 
 		_this.state = {
-			nikValue: "initial value"
+			date1: "",
+			date2: ""
 		};
-		_this.getNikValue = _this.getNikValue.bind(_this);
+		_this.getRange = _this.getRange.bind(_this);
 		return _this;
 	}
 
 	_createClass(Calc, [{
-		key: 'getNikValue',
-		value: function getNikValue(input) {
-			this.setState({ nikValue: input });
+		key: 'getRange',
+		value: function getRange(input) {
+			//console.log( input[0]._d.toString() , typeof(input[0]._d.toString()) );
+			this.setState({ date1: input[0]._d.toString() });
+			this.setState({ date2: input[1]._d.toString() });
 		}
 	}, {
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
 				'div',
 				null,
@@ -71,26 +76,24 @@ var Calc = function (_React$Component) {
 					null,
 					'This is Calculator page'
 				),
-				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default,
+				_react2.default.createElement(_RangeCalendar2.default, {
+					locale: _ru_RU2.default,
 					onChange: function onChange(value) {
-						return console.log(value);
+						return _this2.getRange(value);
 					}
-					//<!--	onSelect = {this.getNikValue} -->
 				}),
-				_react2.default.createElement(_RangeCounter2.default, { nVal: 'this.state.nikValue' }),
-				_react2.default.createElement(
-					'p',
-					null,
-					'My Range must be here: ',
-					this.state.nikValue
-				)
+				_react2.default.createElement(_RangeCounter2.default, {
+					date1: this.state.date1,
+					date2: this.state.date2,
+					onChange: function onChange() {
+						return onChanges;
+					}
+				})
 			);
 		}
 	}]);
 
 	return Calc;
 }(_react2.default.Component);
-
-//console.log("myTestVar = " + myTestVar);
 
 exports.default = Calc;

@@ -15,6 +15,4 @@ var About = function About() {
 	);
 };
 
-alert("About page loaded!");
-
 exports.default = About;

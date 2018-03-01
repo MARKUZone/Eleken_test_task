@@ -4,6 +4,4 @@ const Contacts = () => (
 	</div>
 )
 
-alert("Contacts page loaded!");
-
 export default Contacts;

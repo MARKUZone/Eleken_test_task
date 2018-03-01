@@ -1,14 +1,29 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
 
-function RangeCounter(props){
-  return (
-    <div className="range-counter">
-      <p>This is special value: {props.nVal}.</p>
-    </div>
-  )
-}
 
-alert("It's your lucky day! \n RangeCounter.js is loaded");
+class RangeCounter extends React.Component {
+	constructor(props) {
+		super(props);
+		this.onChanges = this.onChanges.bind(this);
+		this.state = {
+			date1: this.props.date1,
+			date2: this.props.date2
+		}
+	}
+
+	onChanges() {
+		alert("Changes detected!");
+	}
+
+	render() {
+		return (
+			<div className="range-counter">
+		      <p>This is date1: {this.state.date1}.</p>
+		      <p>This is date2: {this.state.date2}.</p>
+		    </div>
+		)
+	}
+}
 
 export default RangeCounter;

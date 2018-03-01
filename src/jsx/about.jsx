@@ -4,6 +4,4 @@ const About = () => (
 	</div>
 )
 
-alert("About page loaded!");
-
 export default About;

@@ -41704,8 +41704,6 @@ var About = function About() {
 	);
 };
 
-alert("About page loaded!");
-
 exports.default = About;
 
 /***/ }),
@@ -41764,20 +41762,25 @@ var Calc = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (Calc.__proto__ || Object.getPrototypeOf(Calc)).call(this, props));
 
 		_this.state = {
-			nikValue: "initial value"
+			date1: "",
+			date2: ""
 		};
-		_this.getNikValue = _this.getNikValue.bind(_this);
+		_this.getRange = _this.getRange.bind(_this);
 		return _this;
 	}
 
 	_createClass(Calc, [{
-		key: 'getNikValue',
-		value: function getNikValue(input) {
-			this.setState({ nikValue: input });
+		key: 'getRange',
+		value: function getRange(input) {
+			//console.log( input[0]._d.toString() , typeof(input[0]._d.toString()) );
+			this.setState({ date1: input[0]._d.toString() });
+			this.setState({ date2: input[1]._d.toString() });
 		}
 	}, {
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
 				'div',
 				null,
@@ -41786,27 +41789,25 @@ var Calc = function (_React$Component) {
 					null,
 					'This is Calculator page'
 				),
-				_react2.default.createElement(_RangeCalendar2.default, { locale: _ru_RU2.default,
+				_react2.default.createElement(_RangeCalendar2.default, {
+					locale: _ru_RU2.default,
 					onChange: function onChange(value) {
-						return console.log(value);
+						return _this2.getRange(value);
 					}
-					//<!--	onSelect = {this.getNikValue} -->
 				}),
-				_react2.default.createElement(_RangeCounter2.default, { nVal: 'this.state.nikValue' }),
-				_react2.default.createElement(
-					'p',
-					null,
-					'My Range must be here: ',
-					this.state.nikValue
-				)
+				_react2.default.createElement(_RangeCounter2.default, {
+					date1: this.state.date1,
+					date2: this.state.date2,
+					onChange: function onChange() {
+						return onChanges;
+					}
+				})
 			);
 		}
 	}]);
 
 	return Calc;
 }(_react2.default.Component);
-
-//console.log("myTestVar = " + myTestVar);
 
 exports.default = Calc;
 
@@ -49221,7 +49222,13 @@ var RangeCalendar = (0, _createReactClass2.default)({
     console.log("selectedValue[0] = " + selectedValue[0]);
     console.log("this.state.selectedValue = " + this.state.selectedValue);
     console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);*/
-    (0, _myPrinter2.default)([selectedValue, selectedValue[0], this.state.selectedValue, this.state.selectedValue[0]]);
+    var myInt = {
+      "selectedValue": selectedValue,
+      "selectedValue[0]": selectedValue[0],
+      "this.state.selectedValue": this.state.selectedValue,
+      "this.state.selectedValue[0]": this.state.selectedValue[0]
+    };
+    (0, _myPrinter2.default)(myInt);
     // ------------------   End of test lines
 
 
@@ -51805,11 +51812,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-function myPrinter(arr) {
+function myPrinter(inp) {
 	console.log("--------------   beginning of myPrinter   --------------");
-	arr.forEach(function (item, i, arr) {
-		//alert( i + ": " + item + " (массив:" + arr + ")" );
-		console.log([i + 1] + ". " + item.toString() + " = " + item + " ;  its type - " + (typeof item === "undefined" ? "undefined" : _typeof(item)));
+	Object.getOwnPropertyNames(inp).forEach(function (item, i, arr) {
+		console.log(item + ' = ' + inp[item] + " ;  its type - " + _typeof(inp[item]));
 	});
 	console.log("--------------   end of myPrinter   --------------");
 }
@@ -51824,8 +51830,10 @@ exports.default = myPrinter;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(1);
 
@@ -51837,21 +51845,59 @@ var _createReactClass2 = _interopRequireDefault(_createReactClass);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function RangeCounter(props) {
-  return _react2.default.createElement(
-    'div',
-    { className: 'range-counter' },
-    _react2.default.createElement(
-      'p',
-      null,
-      'This is special value: ',
-      props.nVal,
-      '.'
-    )
-  );
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-alert("It's your lucky day! \n RangeCounter.js is loaded");
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RangeCounter = function (_React$Component) {
+	_inherits(RangeCounter, _React$Component);
+
+	function RangeCounter(props) {
+		_classCallCheck(this, RangeCounter);
+
+		var _this = _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
+
+		_this.onChanges = _this.onChanges.bind(_this);
+		_this.state = {
+			date1: _this.props.date1,
+			date2: _this.props.date2
+		};
+		return _this;
+	}
+
+	_createClass(RangeCounter, [{
+		key: 'onChanges',
+		value: function onChanges() {
+			alert("Changes detected!");
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'range-counter' },
+				_react2.default.createElement(
+					'p',
+					null,
+					'This is date1: ',
+					this.state.date1,
+					'.'
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					'This is date2: ',
+					this.state.date2,
+					'.'
+				)
+			);
+		}
+	}]);
+
+	return RangeCounter;
+}(_react2.default.Component);
 
 exports.default = RangeCounter;
 
@@ -51876,8 +51922,6 @@ var Contacts = function Contacts() {
 		)
 	);
 };
-
-alert("Contacts page loaded!");
 
 exports.default = Contacts;
 

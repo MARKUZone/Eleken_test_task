@@ -15,6 +15,4 @@ var Contacts = function Contacts() {
 	);
 };
 
-alert("Contacts page loaded!");
-
 exports.default = Contacts;

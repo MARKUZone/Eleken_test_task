@@ -421,7 +421,13 @@ const RangeCalendar = createReactClass({
     console.log("selectedValue[0] = " + selectedValue[0]);
     console.log("this.state.selectedValue = " + this.state.selectedValue);
     console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);*/
-    myPrinter([selectedValue, selectedValue[0], this.state.selectedValue, this.state.selectedValue[0]]);
+    let myInt = {
+      "selectedValue": selectedValue,
+      "selectedValue[0]": selectedValue[0],
+      "this.state.selectedValue": this.state.selectedValue,
+      "this.state.selectedValue[0]": this.state.selectedValue[0]
+    }
+    myPrinter(myInt);
 // ------------------   End of test lines
 
 

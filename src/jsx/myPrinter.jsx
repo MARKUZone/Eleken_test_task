@@ -1,8 +1,7 @@
-function myPrinter(arr) {
+function myPrinter(inp) {
 	console.log("--------------   beginning of myPrinter   --------------");
-	arr.forEach(function(item, i, arr) {
-		//alert( i + ": " + item + " (массив:" + arr + ")" );
-		console.log([i + 1] + ". " + item.toString() + " = " + item + " ;  its type - " + typeof(item));
+	Object.getOwnPropertyNames(inp).forEach(function(item, i, arr) {
+		console.log(item + ' = ' + inp[item] + " ;  its type - " + typeof(inp[item]));
 	});
 	console.log("--------------   end of myPrinter   --------------");
 }

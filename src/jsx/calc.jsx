@@ -11,30 +11,37 @@ class Calc extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			nikValue: "initial value"
+			date1: "",
+			date2: ""
 		};
-		this.getNikValue = this.getNikValue.bind(this);
+		this.getRange = this.getRange.bind(this);
 	}
 
-	getNikValue(input) {
-		this.setState( { nikValue: input } );
+	getRange(input) {
+		//console.log( input[0]._d.toString() , typeof(input[0]._d.toString()) );
+		this.setState( { date1: input[0]._d.toString() } );
+		this.setState( { date2: input[1]._d.toString() } );
 	}
 
 	render() {
 		return (
 			<div>
 				<h2>This is Calculator page</h2>
-				<RangeCalendar 	locale={ruRU}
-								onChange = { value => console.log(value) }
-								//<!--	onSelect = {this.getNikValue} -->
+				<RangeCalendar
+					locale={ruRU}
+					onChange = { value => this.getRange(value) }
 				/>
-				<RangeCounter nVal="this.state.nikValue" />
-				<p>My Range must be here: {this.state.nikValue}</p>
+				<RangeCounter 
+					date1={this.state.date1} 
+					date2={this.state.date2} 
+					onChange={ () => onChanges }
+				/>
+				{/*<p>Calc this.state.date1: {this.state.date1}</p>
+				<p>Calc this.state.date2: {this.state.date2}</p>*/}
 			</div>
 		);
 	}
 }
 
-//console.log("myTestVar = " + myTestVar);
 
 export default Calc;
