@@ -5,6 +5,7 @@ import Picker from 'rc-calendar/lib/Picker';
 import ruRU from 'rc-calendar/lib/locale/ru_RU';
 import RangeCalendar from 'rc-calendar/lib/RangeCalendar';
 import RangeCounter from '../../dist/js/rc-calendar/RangeCounter';
+import myPrinter from '../../dist/js/myPrinter';
 
 
 class Calc extends React.Component {
@@ -18,12 +19,17 @@ class Calc extends React.Component {
 	}
 
 	getRange(input) {
-		//console.log( input[0]._d.toString() , typeof(input[0]._d.toString()) );
-		this.setState( { date1: input[0]._d.toString() } );
-		if (prevState.date1 != this.state.date1) {
-			this.setState( { date2: "no value" } );
-		} else {
+		if ( Object.keys(input).length === 2 ) {
+			this.setState( { date1: input[0]._d.toString() } );
 			this.setState( { date2: input[1]._d.toString() } );
+			const item1 = input[0]._d.toString().split(" ").slice(1, 4);
+			myPrinter({
+				//"Object.keys(input).length": Object.keys(input).length, // trigger
+				"item1": item1,
+				"item1[0]": item1[0]
+			});
+			console.log(item1, typeof(item1));
+			console.log(item1[0], typeof(item1[0]));
 		}
 	}
 
@@ -39,8 +45,6 @@ class Calc extends React.Component {
 					date1={this.state.date1} 
 					date2={this.state.date2} 
 				/>
-				{/*<p>Calc this.state.date1: {this.state.date1}</p>
-				<p>Calc this.state.date2: {this.state.date2}</p>*/}
 			</div>
 		);
 	}

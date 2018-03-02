@@ -32,7 +32,7 @@ class Navigation extends React.Component{
 		return(
 			<BrowserRouter history={history}>
 				<div>
-					<ul>
+					<ul className="menu">
 						<li><Link to="/about">About</Link></li>
 						<li><Link to="/calc">Calculator</Link></li>
 						<li><Link to="/contacts">Contacts</Link></li>

@@ -417,17 +417,13 @@ const RangeCalendar = createReactClass({
 
 
 // ------------------   My test lines
-    /*console.log("selectedValue = " + selectedValue);
-    console.log("selectedValue[0] = " + selectedValue[0]);
-    console.log("this.state.selectedValue = " + this.state.selectedValue);
-    console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);*/
-    let myInt = {
+ /*   let myInt = {
       "selectedValue": selectedValue,
       "selectedValue[0]": selectedValue[0],
       "this.state.selectedValue": this.state.selectedValue,
       "this.state.selectedValue[0]": this.state.selectedValue[0]
     }
-    myPrinter(myInt);
+    myPrinter(myInt);*/
 // ------------------   End of test lines
 
 
@@ -542,20 +538,6 @@ const RangeCalendar = createReactClass({
     const nextMonthOfStart = startValue.clone().add(1, 'months');
     const isClosestMonths = nextMonthOfStart.year() === endValue.year() &&
             nextMonthOfStart.month() === endValue.month();
-
-
-
-    // My test lines:
-
-    //const nikValue = "some text string from RangeCalendar";
-    //console.log("nikValue = " + nikValue); // string is ok and revealed in console
-    //console.log("state.value = " + state.value);
-    //console.log("selectedValue = " + state.selectedValue);
-    //console.log("value = " + value); // value is not defined - ERROR
-
-    // End of my test lines
-
-
 
     return (
       <div

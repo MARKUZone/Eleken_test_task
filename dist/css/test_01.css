@@ -1,2 +1,4 @@
-header .menu .menu-items li {
-  display: inline-block; }
+header .menu .menu-items li,
+.menu li {
+  display: inline-block;
+  margin: 0 50px; }

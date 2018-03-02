@@ -475,17 +475,13 @@ var RangeCalendar = (0, _createReactClass2.default)({
     this.props.onChange(selectedValue);
 
     // ------------------   My test lines
-    /*console.log("selectedValue = " + selectedValue);
-    console.log("selectedValue[0] = " + selectedValue[0]);
-    console.log("this.state.selectedValue = " + this.state.selectedValue);
-    console.log("this.state.selectedValue[0] = " + this.state.selectedValue[0]);*/
-    var myInt = {
-      "selectedValue": selectedValue,
-      "selectedValue[0]": selectedValue[0],
-      "this.state.selectedValue": this.state.selectedValue,
-      "this.state.selectedValue[0]": this.state.selectedValue[0]
-    };
-    (0, _myPrinter2.default)(myInt);
+    /*   let myInt = {
+         "selectedValue": selectedValue,
+         "selectedValue[0]": selectedValue[0],
+         "this.state.selectedValue": this.state.selectedValue,
+         "this.state.selectedValue[0]": this.state.selectedValue[0]
+       }
+       myPrinter(myInt);*/
     // ------------------   End of test lines
 
 
@@ -584,17 +580,6 @@ var RangeCalendar = (0, _createReactClass2.default)({
     var isTodayInView = startValue.year() === thisYear && startValue.month() === thisMonth || endValue.year() === thisYear && endValue.month() === thisMonth;
     var nextMonthOfStart = startValue.clone().add(1, 'months');
     var isClosestMonths = nextMonthOfStart.year() === endValue.year() && nextMonthOfStart.month() === endValue.month();
-
-    // My test lines:
-
-    //const nikValue = "some text string from RangeCalendar";
-    //console.log("nikValue = " + nikValue); // string is ok and revealed in console
-    //console.log("state.value = " + state.value);
-    //console.log("selectedValue = " + state.selectedValue);
-    //console.log("value = " + value); // value is not defined - ERROR
-
-    // End of my test lines
-
 
     return _react2.default.createElement(
       'div',

@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -32,6 +34,10 @@ var _RangeCounter = require('../../dist/js/rc-calendar/RangeCounter');
 
 var _RangeCounter2 = _interopRequireDefault(_RangeCounter);
 
+var _myPrinter = require('../../dist/js/myPrinter');
+
+var _myPrinter2 = _interopRequireDefault(_myPrinter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -59,12 +65,17 @@ var Calc = function (_React$Component) {
 	_createClass(Calc, [{
 		key: 'getRange',
 		value: function getRange(input) {
-			//console.log( input[0]._d.toString() , typeof(input[0]._d.toString()) );
-			this.setState({ date1: input[0]._d.toString() });
-			if (prevState.date1 != this.state.date1) {
-				this.setState({ date2: "no value" });
-			} else {
+			if (Object.keys(input).length === 2) {
+				this.setState({ date1: input[0]._d.toString() });
 				this.setState({ date2: input[1]._d.toString() });
+				var item1 = input[0]._d.toString().split(" ").slice(1, 4);
+				(0, _myPrinter2.default)({
+					//"Object.keys(input).length": Object.keys(input).length, // trigger
+					"item1": item1,
+					"item1[0]": item1[0]
+				});
+				console.log(item1, typeof item1 === 'undefined' ? 'undefined' : _typeof(item1));
+				console.log(item1[0], _typeof(item1[0]));
 			}
 		}
 	}, {

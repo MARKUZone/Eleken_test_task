@@ -28,14 +28,7 @@ var RangeCounter = function (_React$Component) {
 	function RangeCounter(props) {
 		_classCallCheck(this, RangeCounter);
 
-		var _this = _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
-
-		_this.onChanges = _this.onChanges.bind(_this);
-		_this.state = {
-			date1: _this.props.date1,
-			date2: _this.props.date2
-		};
-		return _this;
+		return _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
 	}
 
 	_createClass(RangeCounter, [{
@@ -48,14 +41,14 @@ var RangeCounter = function (_React$Component) {
 					'p',
 					null,
 					'This is date1: ',
-					this.state.date1,
+					this.props.date1,
 					'.'
 				),
 				_react2.default.createElement(
 					'p',
 					null,
 					'This is date2: ',
-					this.state.date2,
+					this.props.date2,
 					'.'
 				)
 			);

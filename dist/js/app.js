@@ -73,7 +73,7 @@ var Navigation = function (_React$Component) {
 					null,
 					_react2.default.createElement(
 						"ul",
-						null,
+						{ className: "menu" },
 						_react2.default.createElement(
 							"li",
 							null,
