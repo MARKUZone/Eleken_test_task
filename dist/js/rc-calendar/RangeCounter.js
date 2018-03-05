@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 var _createReactClass = require('create-react-class');
 
 var _createReactClass2 = _interopRequireDefault(_createReactClass);
@@ -22,16 +26,58 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+function Conclusion(props) {
+	if (props.daysRange === 1) {
+		return _react2.default.createElement(
+			'p',
+			null,
+			'Day range is: 1 day.'
+		);
+	} else if (props.daysRange > 1) {
+		return _react2.default.createElement(
+			'p',
+			null,
+			'Day range is: ',
+			props.daysRange,
+			' days.'
+		);
+	} else {
+		return _react2.default.createElement(
+			'p',
+			null,
+			'Select dates to count date range.'
+		);
+	}
+}
+
 var RangeCounter = function (_React$Component) {
 	_inherits(RangeCounter, _React$Component);
 
 	function RangeCounter(props) {
 		_classCallCheck(this, RangeCounter);
 
-		return _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
+
+		_this.state = {
+			daysRange: 0
+		};
+		_this.daysCounter = _this.daysCounter.bind(_this);
+		return _this;
 	}
 
 	_createClass(RangeCounter, [{
+		key: 'daysCounter',
+		value: function daysCounter() {
+			var day1 = this.props.date1;
+			var day2 = this.props.date2;
+			if (!isNaN(day2)) {
+				var delta = Math.abs(day1 - day2) / (1000 * 3600 * 24);
+				delta = Math.floor(delta) + 1;
+				this.setState({ daysRange: delta });
+				console.log(delta);
+			};
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
@@ -50,7 +96,13 @@ var RangeCounter = function (_React$Component) {
 					'This is date2: ',
 					this.props.date2,
 					'.'
-				)
+				),
+				_react2.default.createElement(
+					'button',
+					{ onClick: this.daysCounter },
+					' button '
+				),
+				_react2.default.createElement(Conclusion, { daysRange: this.state.daysRange })
 			);
 		}
 	}]);

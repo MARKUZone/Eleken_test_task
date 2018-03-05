@@ -20,16 +20,13 @@ class Calc extends React.Component {
 
 	getRange(input) {
 		if ( Object.keys(input).length === 2 ) {
-			this.setState( { date1: input[0]._d.toString() } );
-			this.setState( { date2: input[1]._d.toString() } );
-			const item1 = input[0]._d.toString().split(" ").slice(1, 4);
-			myPrinter({
-				//"Object.keys(input).length": Object.keys(input).length, // trigger
-				"item1": item1,
-				"item1[0]": item1[0]
-			});
-			console.log(item1, typeof(item1));
-			console.log(item1[0], typeof(item1[0]));
+			this.setState( { date1: input[0].valueOf() } );
+			this.setState( { date2: input[1].valueOf() } );
+/*			myPrinter({
+				"input": input,
+				"input[0]": input[0],
+				"input[1]": input[1]
+			});*/
 		}
 	}
 

@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -66,16 +64,13 @@ var Calc = function (_React$Component) {
 		key: 'getRange',
 		value: function getRange(input) {
 			if (Object.keys(input).length === 2) {
-				this.setState({ date1: input[0]._d.toString() });
-				this.setState({ date2: input[1]._d.toString() });
-				var item1 = input[0]._d.toString().split(" ").slice(1, 4);
-				(0, _myPrinter2.default)({
-					//"Object.keys(input).length": Object.keys(input).length, // trigger
-					"item1": item1,
-					"item1[0]": item1[0]
-				});
-				console.log(item1, typeof item1 === 'undefined' ? 'undefined' : _typeof(item1));
-				console.log(item1[0], _typeof(item1[0]));
+				this.setState({ date1: input[0].valueOf() });
+				this.setState({ date2: input[1].valueOf() });
+				/*			myPrinter({
+    				"input": input,
+    				"input[0]": input[0],
+    				"input[1]": input[1]
+    			});*/
 			}
 		}
 	}, {
