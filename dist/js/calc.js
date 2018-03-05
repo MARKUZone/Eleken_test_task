@@ -32,10 +32,6 @@ var _RangeCounter = require('../../dist/js/rc-calendar/RangeCounter');
 
 var _RangeCounter2 = _interopRequireDefault(_RangeCounter);
 
-var _myPrinter = require('../../dist/js/myPrinter');
-
-var _myPrinter2 = _interopRequireDefault(_myPrinter);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -43,6 +39,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//import myPrinter from '../../dist/js/myPrinter';
+
 
 var Calc = function (_React$Component) {
 	_inherits(Calc, _React$Component);
@@ -66,11 +65,6 @@ var Calc = function (_React$Component) {
 			if (Object.keys(input).length === 2) {
 				this.setState({ date1: input[0].valueOf() });
 				this.setState({ date2: input[1].valueOf() });
-				/*			myPrinter({
-    				"input": input,
-    				"input[0]": input[0],
-    				"input[1]": input[1]
-    			});*/
 			}
 		}
 	}, {

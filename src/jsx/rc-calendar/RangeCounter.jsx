@@ -16,30 +16,50 @@ function Conclusion(props) {
 class RangeCounter extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			daysRange: 0
-		};
-		this.daysCounter = this.daysCounter.bind(this);
+		//this.daysCounter = this.daysCounter.bind(this);
 	}
 
-	daysCounter() {
+	/*shouldComponentUpdate(nextProps, nextState) {
+		let day1 = this.props.date1;
+		let day2 = this.props.date2;
+		if (day2 != nextProps.date2 ) {
+			let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
+			delta = Math.floor(delta) + 1 ;
+			this.setState({daysRange: delta});
+			console.log(delta);
+		}
+		let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
+		delta = Math.floor(delta) + 1 ;
+		this.setState({daysRange: delta});
+		console.log(delta);
+	}*/
+	
+	/*componentWillUpdate() {
 		let day1 = this.props.date1;
 		let day2 = this.props.date2;
 		if ( !isNaN( day2 ) ) {
 			let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
 			delta = Math.floor(delta) + 1 ;
-			this.setState({daysRange: delta});
+			//this.setState({daysRange: delta});
 			console.log(delta);
 		};
-	}
+	}*/
 
 	render() {
+		let delta = null;
+		let day1 = this.props.date1;
+		let day2 = this.props.date2;
+		if ( typeof(day2) !== "string" ) {
+			delta = Math.abs( day1 - day2 ) / ( 1000*3600*24 ) ;
+			delta = Math.floor(delta) + 1 ;
+			//console.log(delta);
+		}
+		//console.log(day2, typeof(day2));
 		return (
 			<div className="range-counter">
-			    <p>This is date1: {this.props.date1}.</p>
-			    <p>This is date2: {this.props.date2}.</p>
-			    <button onClick={this.daysCounter} > button </button>
-			    <Conclusion daysRange={this.state.daysRange} />
+			    {/*<p>This is date1: {this.props.date1}.</p>
+			    <p>This is date2: {this.props.date2}.</p>*/}
+			    <Conclusion daysRange={delta} />
 		    </div>
 		)
 	}

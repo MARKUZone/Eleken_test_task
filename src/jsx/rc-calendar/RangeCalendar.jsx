@@ -10,7 +10,7 @@ import TimePickerButton from './calendar/TimePickerButton';
 import CommonMixin from './mixin/CommonMixin';
 import { syncTime, getTodayTime, isAllowedDate } from './util/';
 //import RangeCounter from '../../../dist/js/rc-calendar/RangeCounter';
-import myPrinter from '../../../dist/js/myPrinter';
+//import myPrinter from '../../../dist/js/myPrinter';
 
 
 var myTestVar = "Test var is working!";

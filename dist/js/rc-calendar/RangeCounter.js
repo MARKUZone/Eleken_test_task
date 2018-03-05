@@ -56,53 +56,52 @@ var RangeCounter = function (_React$Component) {
 	function RangeCounter(props) {
 		_classCallCheck(this, RangeCounter);
 
-		var _this = _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
-
-		_this.state = {
-			daysRange: 0
-		};
-		_this.daysCounter = _this.daysCounter.bind(_this);
-		return _this;
+		return _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
+		//this.daysCounter = this.daysCounter.bind(this);
 	}
 
+	/*shouldComponentUpdate(nextProps, nextState) {
+ 	let day1 = this.props.date1;
+ 	let day2 = this.props.date2;
+ 	if (day2 != nextProps.date2 ) {
+ 		let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
+ 		delta = Math.floor(delta) + 1 ;
+ 		this.setState({daysRange: delta});
+ 		console.log(delta);
+ 	}
+ 	let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
+ 	delta = Math.floor(delta) + 1 ;
+ 	this.setState({daysRange: delta});
+ 	console.log(delta);
+ }*/
+
+	/*componentWillUpdate() {
+ 	let day1 = this.props.date1;
+ 	let day2 = this.props.date2;
+ 	if ( !isNaN( day2 ) ) {
+ 		let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
+ 		delta = Math.floor(delta) + 1 ;
+ 		//this.setState({daysRange: delta});
+ 		console.log(delta);
+ 	};
+ }*/
+
 	_createClass(RangeCounter, [{
-		key: 'daysCounter',
-		value: function daysCounter() {
-			var day1 = this.props.date1;
-			var day2 = this.props.date2;
-			if (!isNaN(day2)) {
-				var delta = Math.abs(day1 - day2) / (1000 * 3600 * 24);
-				delta = Math.floor(delta) + 1;
-				this.setState({ daysRange: delta });
-				console.log(delta);
-			};
-		}
-	}, {
 		key: 'render',
 		value: function render() {
+			var delta = null;
+			var day1 = this.props.date1;
+			var day2 = this.props.date2;
+			if (typeof day2 !== "string") {
+				delta = Math.abs(day1 - day2) / (1000 * 3600 * 24);
+				delta = Math.floor(delta) + 1;
+				//console.log(delta);
+			}
+			//console.log(day2, typeof(day2));
 			return _react2.default.createElement(
 				'div',
 				{ className: 'range-counter' },
-				_react2.default.createElement(
-					'p',
-					null,
-					'This is date1: ',
-					this.props.date1,
-					'.'
-				),
-				_react2.default.createElement(
-					'p',
-					null,
-					'This is date2: ',
-					this.props.date2,
-					'.'
-				),
-				_react2.default.createElement(
-					'button',
-					{ onClick: this.daysCounter },
-					' button '
-				),
-				_react2.default.createElement(Conclusion, { daysRange: this.state.daysRange })
+				_react2.default.createElement(Conclusion, { daysRange: delta })
 			);
 		}
 	}]);
