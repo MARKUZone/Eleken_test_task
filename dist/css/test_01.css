@@ -3,8 +3,9 @@ header .menu .menu-items li,
   display: inline-block;
   margin: 0 50px; }
 
-.home a {
-  margin-right: 20px; }
-
-.home a:first-of-type {
-  opacity: 0.5; }
+.home {
+  /* a:first-of-type {
+		opacity: 0.5;
+	} */ }
+  .home input {
+    margin: 20px; }
