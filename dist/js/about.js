@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 var About = function About() {
 	return React.createElement(
 		"div",
-		null,
+		{ className: "test-color" },
 		React.createElement(
 			"h2",
 			null,

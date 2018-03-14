@@ -1,3 +1,16 @@
+$margin-value: 50px;
+$bg-color: #eee;
+
+.dflex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	background-color: $bg-color;
+}
+
 .menu li {
 	display: inline-block;
 	margin: 0 50px;
@@ -5,7 +18,7 @@
 
 .home {
 	input {
-		margin: 20px;
+		margin: 2px;
 		background-color: #CCBD19FF;
 	}
 }
@@ -13,8 +26,6 @@
 .test-block .row .col {
 	text-align: center;
 }
-
-$margin-value: 50px;
 
 header nav{
 	>a {
@@ -28,6 +39,35 @@ header nav{
 		margin-right: $margin-value;
 	}
 	background: linear-gradient(-10deg, #14194C, #1F3F64);
+}
+
+.test-color{
+	color: red;
+}
+
+section.about{
+	li{
+		list-style: none;
+		.row {
+			background-color: #fff;
+			box-shadow: 0 0 2px 0px #444;
+			border-radius: 4px;
+			.col-1 {
+				text-align: center;
+				>* {
+					font-size: 24px;
+					margin-left: 15px;
+				}
+			}
+			div:nth-child(2)>h4 {
+				margin: 1rem auto;
+			}
+		}
+	}
+	ul{
+		padding: 0;
+	}
+	color: green;
 }
 
 
