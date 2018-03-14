@@ -1,0 +1,26 @@
+.menu li {
+  display: inline-block;
+  margin: 0 50px; }
+
+.home input {
+  margin: 20px;
+  background-color: #CCBD19FF; }
+
+.test-block .row .col {
+  text-align: center; }
+
+header nav {
+  background: linear-gradient(-10deg, #14194C, #1F3F64); }
+  header nav > a {
+    margin-left: 50px; }
+    header nav > a img {
+      margin-right: 10px;
+      transform: translateY(-7%); }
+  header nav div {
+    margin-right: 50px; }
+
+@media (max-width: 575px) {
+  header nav > a {
+    margin-left: 0; }
+  header nav div {
+    margin-right: 0; } }

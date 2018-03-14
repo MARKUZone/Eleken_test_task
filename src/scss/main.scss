@@ -1,0 +1,45 @@
+.menu li {
+	display: inline-block;
+	margin: 0 50px;
+}
+
+.home {
+	input {
+		margin: 20px;
+		background-color: #CCBD19FF;
+	}
+}
+
+.test-block .row .col {
+	text-align: center;
+}
+
+$margin-value: 50px;
+
+header nav{
+	>a {
+		margin-left: $margin-value;
+		img {
+			margin-right: 10px;
+			transform: translateY(-7%);
+		}
+	}
+	div {
+		margin-right: $margin-value;
+	}
+	background: linear-gradient(-10deg, #14194C, #1F3F64);
+}
+
+
+
+@media (max-width: 575px){
+	header nav{
+		>a {
+			margin-left: 0;
+		}
+		div {
+			margin-right: 0;
+		}
+	}
+}
+
