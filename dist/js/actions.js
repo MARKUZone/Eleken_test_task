@@ -7,6 +7,7 @@ if ( window.location.href.slice(7, 16) === "localhost" ) {
 }
 
 
+
 // test div text change
 function testClick() {
 	let elements = document.getElementsByClassName("test-block")[0].getElementsByClassName("row")[0].getElementsByTagName("div");
@@ -25,5 +26,22 @@ function testClick() {
 		console.log(i, " --- ", elements[i], " --- ", elements[i].innerHTML);
 	}
 }
+
+
+
+// put shadow on hovered About block
+let squareElements = document.getElementsByClassName('shadow-aim');
+Array.prototype.forEach.call(squareElements, item => {
+	shadow(item);
+});
+function shadow(item) {
+	item.addEventListener('mouseover', function () {
+		this.classList.add('shadow');
+	});
+	item.addEventListener('mouseout', function () {
+		this.classList.remove('shadow');
+	});
+}
+
 
 

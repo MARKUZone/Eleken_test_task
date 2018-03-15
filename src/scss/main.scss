@@ -9,8 +9,8 @@ $link-black-hover: #2D2D2D;
 	align-items: center;
 }
 
-.rotated {
-	transform: rotate(180deg);
+.shadow{
+	box-shadow: 0 0 8px 0px grey !important;
 }
 
 body {
@@ -60,24 +60,28 @@ section.about{
 			background-color: #fff;
 			box-shadow: 0 0 2px 0px #444;
 			border-radius: 4px;
+			transition: box-shadow .5s;
 			.col-1 {
 				text-align: center;
 				>* {
 					font-size: 24px;
 					margin-left: 15px;
+					margin-bottom: 6px;
 				}
 			}
 			.col {
 				a {
-					//display: block;
 					justify-content: space-between;
 					text-decoration: none;
 					color: $link-black;
 					&:hover {
 						color: $link-black-hover;
 						& svg {
-							//transform: rotate(180deg);
+							//transform: scale(1, -1);
 						}
+					}
+					svg {
+						transition: transform .5s;
 					}
 				}
 				.hide-block {

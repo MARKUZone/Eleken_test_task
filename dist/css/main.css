@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center; }
 
-.rotated {
-  transform: rotate(180deg); }
+.shadow {
+  box-shadow: 0 0 8px 0px grey !important; }
 
 body {
   background-color: #eee; }
@@ -40,18 +40,22 @@ section.about {
     section.about li .row {
       background-color: #fff;
       box-shadow: 0 0 2px 0px #444;
-      border-radius: 4px; }
+      border-radius: 4px;
+      transition: box-shadow .5s; }
       section.about li .row .col-1 {
         text-align: center; }
         section.about li .row .col-1 > * {
           font-size: 24px;
-          margin-left: 15px; }
+          margin-left: 15px;
+          margin-bottom: 6px; }
       section.about li .row .col a {
         justify-content: space-between;
         text-decoration: none;
         color: #5f5f5f; }
         section.about li .row .col a:hover {
           color: #2D2D2D; }
+        section.about li .row .col a svg {
+          transition: transform .5s; }
       section.about li .row .col .hide-block {
         display: none; }
       section.about li .row div:nth-child(2) > a {
