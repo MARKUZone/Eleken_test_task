@@ -3,8 +3,11 @@ $( "#clickme" ).click(function() {
 	});
 });
 
-$( ".about .row .row" ).click(function() {
-	$( ".about .row .row col p" ).slideToggle( "fast", function() {
+
+$( "#click-field-1" ).click(function() {
+	$( "#hide-field-1" ).slideToggle( "fast", function() {
 	});
+	$( ".fa-angle-down" ).rotate(45);
 });
+
 

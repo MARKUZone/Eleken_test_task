@@ -3,6 +3,9 @@
   justify-content: center;
   align-items: center; }
 
+.rotated {
+  transform: rotate(180deg); }
+
 body {
   background-color: #eee; }
 
@@ -43,7 +46,15 @@ section.about {
         section.about li .row .col-1 > * {
           font-size: 24px;
           margin-left: 15px; }
-      section.about li .row div:nth-child(2) > h4 {
+      section.about li .row .col a {
+        justify-content: space-between;
+        text-decoration: none;
+        color: #5f5f5f; }
+        section.about li .row .col a:hover {
+          color: #2D2D2D; }
+      section.about li .row .col .hide-block {
+        display: none; }
+      section.about li .row div:nth-child(2) > a {
         margin: 1rem auto; }
   section.about ul {
     padding: 0; }
