@@ -10,9 +10,6 @@
 		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!-- <script crossorigin src="https://raw.githubusercontent.com/wilq32/jqueryrotate/master/jQueryRotate.js"></script> -->
-		<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -47,7 +44,7 @@
 	</header>
 
 	
-	<div class="test-block">
+	<!-- <div class="test-block">
 		<div class="container">
 			<div class="row" onclick="testClick()">
 				<div class="col">some name</div>
@@ -58,17 +55,17 @@
 				<div class="col">some name</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
-	<section class="about">
+	<section class="about xslider-container">
 		<div class="container">
-			<div class="row">
+			<div class="row m0">
 				<div class="col">
 					<h2>Calendar date range finder app</h2>
 					<ul>
-						<li>
-							<div class="row shadow-aim" id="click-field-1">
+						<li class="xslider1">
+							<div class="row shadow-aim click-field">
 								<div class="col-1 dflex">
 									<i class="fas fa-clipboard-list"></i>
 								</div>
@@ -77,7 +74,7 @@
 										<h4>How to Setup</h4>
 										<i class="fas fa-angle-down"></i>
 									</a>
-									<div class="hide-block" id="hide-field-1">
+									<div class="hide-block">
 										<p><b>Step 1:</b> git clone this repo</p>
 										<p><b>Step 2:</b> cd to the cloned</p>
 										<p><b>Step 3:</b> install the Application</p>
@@ -85,13 +82,42 @@
 								</div>
 							</div>
 						</li>
-						<li>
-							<h4>How to Setup</h4>
-							<p><b>Step 1:</b> git clone this repo</p>
-							<p><b>Step 2:</b> cd to the cloned</p>
-							<p><b>Step 3:</b> install the Application</p>
+						<li class="xslider2">
+							<div class="row shadow-aim click-field">
+								<div class="col-1 dflex">
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+								<div class="col">
+									<a href="#" class="dflex">
+										<h4>How to Setup</h4>
+										<i class="fas fa-angle-down"></i>
+									</a>
+									<div class="hide-block">
+										<p><b>Step 1:</b> git clone this repo</p>
+										<p><b>Step 2:</b> cd to the cloned</p>
+										<p><b>Step 3:</b> install the Application</p>
+									</div>
+								</div>
+							</div>
 						</li>
-						
+						<li class="xslider3">
+							<div class="row shadow-aim click-field">
+								<div class="col-1 dflex">
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+								<div class="col">
+									<a href="#" class="dflex">
+										<h4>How to Setup</h4>
+										<i class="fas fa-angle-down"></i>
+									</a>
+									<div class="hide-block">
+										<p><b>Step 1:</b> git clone this repo</p>
+										<p><b>Step 2:</b> cd to the cloned</p>
+										<p><b>Step 3:</b> install the Application</p>
+									</div>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -99,12 +125,38 @@
 	</section>
 
 	
+
 	<div id="clickme">
 		Click here
 	</div>
-	<p id="book">some text here to show up and hide</p>
-
-
+	<div class="add-container xslider-container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div id="book-container">
+						<p class="xslider xslider1" id="book">some text here to show up and hide</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div id="book-container">
+						<p class="xslider xslider2" id="book">some text here to show up and hide</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div id="book-container">
+						<p class="xslider xslider3" id="book">some text here to show up and hide</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
 	<div class="test">
 		<div id="root"></div>
 	</div>
