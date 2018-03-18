@@ -1,7 +1,7 @@
 // 'reload button' changes on host address
 function linkGen() {
+	const elem = document.getElementsByClassName("home")[0].getElementsByTagName("input")[0];
 	if ( window.location.href.slice(7, 16) === "localhost" ) {
-		const elem = document.getElementsByClassName("home")[0].getElementsByTagName("input")[0];
 		elem.setAttribute("value", "reload at localhost");
 		elem.setAttribute("onclick", "location.href='http://localhost:3000/';");
 		elem.style.backgroundColor = "#7C7";
@@ -23,7 +23,7 @@ function testClick() {
 		console.log(elements[i], " --- ", elements[i].innerHTML);
 		elements[i].innerHTML = "Element # " + (i + 1);
 	});
-	// вместо строк 14-18 можно прописать блок ниже
+	// вместо 5 строк выше можно прописать блок ниже
 	/*for ( let i = 0 ; i < elements.length ; i++ ) {
 		console.log(elements[i]);
 		elements[i].innerHTML = "Element # " + (i + 1);
@@ -36,43 +36,42 @@ function testClick() {
 
 
 // put shadow on hovered About block
-let squareElements = document.getElementsByClassName('shadow-aim');
-Array.prototype.forEach.call(squareElements, item => {
-	shadow(item);
-});
-function shadow(item) {
-	item.addEventListener('mouseover', function () {
-		this.classList.add('shadow');
+function aboutShadow() {
+	let squareElements = document.getElementsByClassName('shadow-aim');
+	Array.prototype.forEach.call(squareElements, item => {
+		shadow(item);
 	});
-	item.addEventListener('mouseout', function () {
-		this.classList.remove('shadow');
-	});
+	function shadow(item) {
+		item.addEventListener('mouseover', function () {
+			this.classList.add('shadow');
+		});
+		item.addEventListener('mouseout', function () {
+			this.classList.remove('shadow');
+		});
+	}
 }
 
 
 
 // keeps navbar link active while not switched to another link
 let navbarLinks = document.getElementsByClassName('nav-link');
-console.log(navbarLinks);
-Array.prototype.forEach.call(navbarLinks, item => {
+Array.prototype.forEach.call(navbarLinks, (item, i, array) => {
 	item.addEventListener('click', function () {
 		this.classList.add('activeLink');
+		Array.prototype.forEach.call(navbarLinks, (item2, i2, array2) => {
+			if ( i != i2 ) {
+				item2.classList.remove('activeLink');
+			}
+		});
 	});
 });
-//document.getElementById("test-button").onclick = () => alert('ok');
-let navbarLinks2 = document.getElementsByClassName('test-el');
-Array.prototype.forEach.call(navbarLinks2, item => {
-	item.addEventListener('click', function () {
-		alert('ok');
-	});
-});
-document.getElementById("test-button").onclick = () => {
-	console.log("button worked!");
-	document.getElementsByClassName('nav-link')[2].classList.add('activeLink');
-};
 
-var rect = document.getElementsByClassName('nav-link')[0].getBoundingClientRect();
-console.log(rect.top, rect.right, rect.bottom, rect.left);
+
+
+// test button
+document.getElementById("test-button").onclick = () => {
+	document.getElementsByClassName("test-el")[0].innerHTML = "some new text";
+}
 
 
 

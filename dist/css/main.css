@@ -11,8 +11,7 @@ body {
 
 .activeLink {
   color: #444 !important;
-  background-color: #ffffffd6;
-  border-radius: 6px; }
+  background-color: #ffffffd6; }
 
 .xslider-container {
   overflow-x: hidden; }
@@ -43,8 +42,10 @@ body {
 header nav {
   background: linear-gradient(-10deg, #14194C, #1F3F64); }
   header nav ul li a {
-    color: #ccc !important; }
-    header nav ul li a:hover {
+    color: #ccc !important;
+    border-radius: 6px;
+    transition: color .5s, background-color .5s; }
+    header nav ul li a:hover:not(.activeLink) {
       color: #fff !important; }
   header nav > a {
     margin-left: 50px; }
@@ -92,5 +93,8 @@ section.about {
     margin-left: 0; }
   header nav div {
     margin-right: 0; }
+  header nav .nav-link {
+    margin: 0 -15px;
+    padding-left: 15px !important; }
   .m0 {
     margin: 0; } }

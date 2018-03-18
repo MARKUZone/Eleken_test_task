@@ -22,7 +22,6 @@ body {
 .activeLink {
 	color: #444 !important;
 	background-color: #ffffffd6;
-	border-radius: 6px;
 }
 
 
@@ -74,7 +73,9 @@ header nav{
 	background: linear-gradient(-10deg, #14194C, #1F3F64);
 	ul li a {
 		color: $link-white !important;
-		&:hover {
+		border-radius: 6px;
+		transition: color .5s, background-color .5s;
+		&:hover:not(.activeLink) {
 			color: $link-white-hover !important;
 		}
 	}
@@ -149,6 +150,10 @@ section.about {
 		}
 		div {
 			margin-right: 0;
+		}
+		.nav-link {
+			margin: 0 -15px;
+			padding-left: 15px !important;
 		}
 	}
 
