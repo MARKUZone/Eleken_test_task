@@ -38148,35 +38148,63 @@ var Navigation = function (_React$Component) {
 				{ history: history },
 				_react2.default.createElement(
 					"div",
-					null,
+					{ className: "app-begin" },
 					_react2.default.createElement(
-						"ul",
-						{ className: "menu" },
+						"header",
+						null,
 						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ to: "/about" },
-								"About"
-							)
+							"div",
+							{ className: "home" },
+							_react2.default.createElement("input", { type: "button" })
 						),
 						_react2.default.createElement(
-							"li",
-							null,
+							"nav",
+							{ className: "navbar navbar-expand-sm navbar-dark bg-light" },
 							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ to: "/calc" },
-								"Calculator"
-							)
-						),
-						_react2.default.createElement(
-							"li",
-							null,
+								"a",
+								{ className: "navbar-brand", title: "Eleken test task", href: "#" },
+								_react2.default.createElement("img", { width: "32", alt: "React", src: "https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg" }),
+								"Navbar"
+							),
 							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ to: "/contacts" },
-								"Contacts"
+								"button",
+								{ className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarSupportedContent", "aria-controls": "navbarSupportedContent", "aria-expanded": "false", "aria-label": "Toggle navigation" },
+								_react2.default.createElement("span", { className: "navbar-toggler-icon" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "collapse navbar-collapse", id: "navbarSupportedContent" },
+								_react2.default.createElement(
+									"ul",
+									{ className: "navbar-nav ml-auto" },
+									_react2.default.createElement(
+										"li",
+										{ className: "nav-item" },
+										_react2.default.createElement(
+											_reactRouterDom.Link,
+											{ to: "/about", className: "nav-link" },
+											"About"
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "nav-item" },
+										_react2.default.createElement(
+											_reactRouterDom.Link,
+											{ to: "/calc", className: "nav-link" },
+											"Calendar"
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "nav-item" },
+										_react2.default.createElement(
+											_reactRouterDom.Link,
+											{ to: "/contacts", className: "nav-link" },
+											"Contacts"
+										)
+									)
+								)
 							)
 						)
 					),

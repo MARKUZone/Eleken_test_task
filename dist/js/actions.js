@@ -1,10 +1,16 @@
 // 'reload button' changes on host address
-if ( window.location.href.slice(7, 16) === "localhost" ) {
-	const elem = document.getElementsByClassName("home")[0].getElementsByTagName("input")[0];
-	elem.setAttribute("value", "reload at localhost");
-	elem.setAttribute("onclick", "location.href='http://localhost:3000/';");
-	elem.style.backgroundColor = "#7C7";
+function linkGen() {
+	if ( window.location.href.slice(7, 16) === "localhost" ) {
+		const elem = document.getElementsByClassName("home")[0].getElementsByTagName("input")[0];
+		elem.setAttribute("value", "reload at localhost");
+		elem.setAttribute("onclick", "location.href='http://localhost:3000/';");
+		elem.style.backgroundColor = "#7C7";
+	} else {
+		elem.setAttribute("value", "reload at github");
+		elem.setAttribute("onclick", "location.href='https://markuzone.github.io/Eleken_test_task/';");
+	}
 }
+window.onload = () => linkGen();
 
 
 
@@ -42,6 +48,31 @@ function shadow(item) {
 		this.classList.remove('shadow');
 	});
 }
+
+
+
+// keeps navbar link active while not switched to another link
+let navbarLinks = document.getElementsByClassName('nav-link');
+console.log(navbarLinks);
+Array.prototype.forEach.call(navbarLinks, item => {
+	item.addEventListener('click', function () {
+		this.classList.add('activeLink');
+	});
+});
+//document.getElementById("test-button").onclick = () => alert('ok');
+let navbarLinks2 = document.getElementsByClassName('test-el');
+Array.prototype.forEach.call(navbarLinks2, item => {
+	item.addEventListener('click', function () {
+		alert('ok');
+	});
+});
+document.getElementById("test-button").onclick = () => {
+	console.log("button worked!");
+	document.getElementsByClassName('nav-link')[2].classList.add('activeLink');
+};
+
+var rect = document.getElementsByClassName('nav-link')[0].getBoundingClientRect();
+console.log(rect.top, rect.right, rect.bottom, rect.left);
 
 
 

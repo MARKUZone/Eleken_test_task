@@ -13,20 +13,25 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</head>
 	<body>
-	
 
 
-	
-	<header>
+
+	<div class="app">
+		<div id="root"></div>
+	</div>
+
+
+
+	<!-- <header>
 		<div class="home">
 			<input type="button" onclick="location.href='https://markuzone.github.io/Eleken_test_task/';" value="reload at github" />
 		</div>
 		<nav class="navbar navbar-expand-sm navbar-dark bg-light">
-			<a class="navbar-brand title="none" href="#"><img width="32" alt="React" src="https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg"/>Navbar</a>
+			<a class="navbar-brand" title="none" href="#"><img width="32" alt="React" src="https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg"/>Navbar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
+	
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
@@ -41,7 +46,7 @@
 				</ul>
 			</div>
 		</nav>
-	</header>
+	</header> -->
 
 	
 	<!-- <div class="test-block">
@@ -62,9 +67,9 @@
 		<div class="container">
 			<div class="row m0">
 				<div class="col">
-					<h2>Calendar date range finder app</h2>
+					<h2 class="xslider xslider1">Calendar date range finder app</h2>
 					<ul>
-						<li class="xslider1">
+						<li class="xslider xslider2">
 							<div class="row shadow-aim click-field">
 								<div class="col-1 dflex">
 									<i class="fas fa-clipboard-list"></i>
@@ -82,7 +87,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="xslider2">
+						<li class="xslider xslider3">
 							<div class="row shadow-aim click-field">
 								<div class="col-1 dflex">
 									<i class="fas fa-clipboard-list"></i>
@@ -100,7 +105,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="xslider3">
+						<li class="xslider xslider4">
 							<div class="row shadow-aim click-field">
 								<div class="col-1 dflex">
 									<i class="fas fa-clipboard-list"></i>
@@ -124,9 +129,14 @@
 		</div>
 	</section>
 
-	
 
-	<div id="clickme">
+
+	<input type="button" value="test button" id="test-button">
+	<p class="test-el">test nav-link</p>
+
+
+
+	<!-- <div id="clickme">
 		Click here
 	</div>
 	<div class="add-container xslider-container">
@@ -153,24 +163,19 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 	
-	
-	<div class="test">
-		<div id="root"></div>
-	</div>
-
 	
 	<footer>
 		
 	</footer>
 
 
-	
 
+
+	<script src="dist/bundle.js" charset="utf-8"></script>
 	<script src="dist/js/actions-jquery.js"></script>
 	<script src="dist/js/actions.js"></script>
-	<script src="dist/bundle.js" charset="utf-8"></script>
 	</body>
 </html>

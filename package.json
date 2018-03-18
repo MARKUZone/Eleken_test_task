@@ -36,7 +36,7 @@
     "babel": "babel src/jsx -d dist/js",
     "babel:watch": "babel src/jsx -d dist/js -w",
     "wp": "webpack",
-    "wp:watch": "webpack -w",
+    "webpack:watch": "webpack -w",
     "server": "webpack-dev-server",
     "deploy1": "babel src/jsx -d dist/js && webpack && webpack-dev-server",
     "deploy2": "babel src/jsx -d dist/js && node dist/js/copy_1.js && webpack && webpack-dev-server",

@@ -9,11 +9,14 @@
 body {
   background-color: #eee; }
 
+.activeLink {
+  color: #444 !important;
+  background-color: #ffffffd6;
+  border-radius: 6px; }
+
 .xslider-container {
   overflow-x: hidden; }
   .xslider-container .xslider {
-    background-color: #333;
-    color: #eee;
     position: relative;
     opacity: 0;
     transform: translateX(2400px); }
@@ -39,6 +42,10 @@ body {
 
 header nav {
   background: linear-gradient(-10deg, #14194C, #1F3F64); }
+  header nav ul li a {
+    color: #ccc !important; }
+    header nav ul li a:hover {
+      color: #fff !important; }
   header nav > a {
     margin-left: 50px; }
     header nav > a img {
@@ -48,7 +55,7 @@ header nav {
     margin-right: 50px; }
 
 section.about {
-  color: green; }
+  color: #808080; }
   section.about h2 {
     margin: 20px auto; }
   section.about ul {
