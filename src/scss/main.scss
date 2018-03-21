@@ -11,6 +11,13 @@ $link-white-hover: #fff;
 	align-items: center;
 }
 
+.navbar {
+	position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 .shadow{
 	box-shadow: 0 0 12px 0px grey !important;
 }
@@ -23,6 +30,7 @@ body {
 	color: #444 !important;
 	background-color: #ffffffd6;
 }
+
 
 
 
@@ -53,21 +61,21 @@ body {
 
 
 
-.menu li {
+/* .menu li {
 	display: inline-block;
 	margin: 0 50px;
-}
+} */
 
-.home {
+/* .home {
 	input {
 		margin: 2px;
 		background-color: #CCBD19FF;
 	}
-}
+} */
 
-.test-block .row .col {
+/* .test-block .row .col {
 	text-align: center;
-}
+} */
 
 header nav{
 	background: linear-gradient(-10deg, #14194C, #1F3F64);

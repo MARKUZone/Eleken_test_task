@@ -75,11 +75,6 @@ var Navigation = function (_React$Component) {
 						"header",
 						null,
 						_react2.default.createElement(
-							"div",
-							{ className: "home" },
-							_react2.default.createElement("input", { type: "button" })
-						),
-						_react2.default.createElement(
 							"nav",
 							{ className: "navbar navbar-expand-sm navbar-dark bg-light" },
 							_react2.default.createElement(

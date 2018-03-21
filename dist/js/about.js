@@ -24,12 +24,15 @@ var About = function (_React$Component) {
 	_createClass(About, [{
 		key: "componentDidMount",
 		value: function componentDidMount() {
-			aboutRevealer();
+			aboutRevealer("about");
+			aboutShadow();
+			aboutInteraction();
 		}
 	}, {
 		key: "render",
 		value: function render() {
-			React.createElement(
+
+			return React.createElement(
 				"div",
 				{ className: "About-comp" },
 				React.createElement(

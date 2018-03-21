@@ -28,17 +28,17 @@ const Contacts = () => (
 
 
 class Navigation extends React.Component{
-	render(){
+	render() {
 		return(
 			<BrowserRouter history={history}>
 				<div className="app-begin">
 					
 					
 					<header>
-						<div className="home">
+						{/*<div className="home">
 							<input type="button" />
-						</div>
-						<nav className="navbar navbar-expand-sm navbar-dark bg-light">
+						</div>*/}
+						<nav className="navbar navbar-expand-sm navbar-dark bg-light" >
 							<a className="navbar-brand" title="Eleken test task" href="#"><img width="32" alt="React" src="https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg"/>Navbar</a>
 							<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 								<span className="navbar-toggler-icon"></span>

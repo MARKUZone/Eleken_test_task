@@ -3,6 +3,12 @@
   justify-content: center;
   align-items: center; }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; }
+
 .shadow {
   box-shadow: 0 0 12px 0px grey !important; }
 
@@ -28,17 +34,19 @@ body {
 		opacity: 0;
 		transform: translateX(2400px); */ }
 
-.menu li {
-  display: inline-block;
-  margin: 0 50px; }
-
-.home input {
-  margin: 2px;
-  background-color: #CCBD19FF; }
-
-.test-block .row .col {
-  text-align: center; }
-
+/* .menu li {
+	display: inline-block;
+	margin: 0 50px;
+} */
+/* .home {
+	input {
+		margin: 2px;
+		background-color: #CCBD19FF;
+	}
+} */
+/* .test-block .row .col {
+	text-align: center;
+} */
 header nav {
   background: linear-gradient(-10deg, #14194C, #1F3F64); }
   header nav ul li a {

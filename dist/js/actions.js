@@ -1,5 +1,5 @@
 // 'reload button' changes on host address
-function linkGen() {
+/*function linkGen() {
 	const elem = document.getElementsByClassName("home")[0].getElementsByTagName("input")[0];
 	if ( window.location.href.slice(7, 16) === "localhost" ) {
 		elem.setAttribute("value", "reload at localhost");
@@ -8,6 +8,16 @@ function linkGen() {
 	} else {
 		elem.setAttribute("value", "reload at github");
 		elem.setAttribute("onclick", "location.href='https://markuzone.github.io/Eleken_test_task/';");
+	}
+}*/
+function linkGen() {
+	const elem = document.getElementsByClassName("navbar-brand")[0];
+	if ( window.location.href.slice(7, 16) === "localhost" ) {
+		elem.setAttribute("title", "reload at localhost");
+		elem.setAttribute("href", "http://localhost:3000/");
+	} else {
+		elem.setAttribute("title", "click to reload page");
+		elem.setAttribute("href", "https://markuzone.github.io/Eleken_test_task/");
 	}
 }
 window.onload = () => linkGen();
@@ -72,6 +82,17 @@ Array.prototype.forEach.call(navbarLinks, (item, i, array) => {
 document.getElementById("test-button").onclick = () => {
 	document.getElementsByClassName("test-el")[0].innerHTML = "some new text";
 }
+
+
+
+// correct page depending on navbar height
+function navbarHeight() {
+	let height = document.getElementsByClassName('navbar')[0].offsetHeight;
+	console.log("height = " + height);
+}
+document.getElementsByClassName('navbar')[0].addEventListener('click', () => {
+	navbarHeight();
+});
 
 
 

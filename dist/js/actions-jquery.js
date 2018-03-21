@@ -1,32 +1,19 @@
 // xslider animation after page load
-function aboutRevealer() {
-	console.log("ok_10");
-	let aboutRevealed = false;
+function aboutRevealer(section) {
 	function xslider(item) {
-		console.log("ok_5");
 		$( item ).animate({
 			opacity: 1,
 			left: "-=2400"
 		}, 1000, function() {
 			// Animation complete.
-			console.log("ok_6");
 		});
-		console.log("ok_7");
 	}
-	console.log("ok_1");
-	if ( !aboutRevealed ) {
-		const blocks = document.querySelectorAll('.about .xslider').length;
-		console.log("ok_2");
-		console.log("blocks = ", blocks);
-		for ( let i = 1; i <= blocks; ++i ) {
-			const item = ".xslider" + i;
-			const delay = i*350;
-			console.log("ok_3");
-			setTimeout( () => xslider(item), delay);
-		}
+	const blocks = document.querySelectorAll('.' + section + ' .xslider').length;
+	for ( let i = 1; i <= blocks; ++i ) {
+		const item = ".xslider" + i;
+		const delay = i*350;
+		setTimeout( () => xslider(item), delay);
 	}
-	aboutRevealed = true;
-	console.log("ok_4");
 }
 
 

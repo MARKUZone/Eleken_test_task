@@ -38153,11 +38153,6 @@ var Navigation = function (_React$Component) {
 						"header",
 						null,
 						_react2.default.createElement(
-							"div",
-							{ className: "home" },
-							_react2.default.createElement("input", { type: "button" })
-						),
-						_react2.default.createElement(
 							"nav",
 							{ className: "navbar navbar-expand-sm navbar-dark bg-light" },
 							_react2.default.createElement(
@@ -41741,12 +41736,15 @@ var About = function (_React$Component) {
 	_createClass(About, [{
 		key: "componentDidMount",
 		value: function componentDidMount() {
-			aboutRevealer();
+			aboutRevealer("about");
+			aboutShadow();
+			aboutInteraction();
 		}
 	}, {
 		key: "render",
 		value: function render() {
-			React.createElement(
+
+			return React.createElement(
 				"div",
 				{ className: "About-comp" },
 				React.createElement(
