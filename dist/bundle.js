@@ -38159,7 +38159,7 @@ var Navigation = function (_React$Component) {
 								"a",
 								{ className: "navbar-brand", title: "Eleken test task", href: "#" },
 								_react2.default.createElement("img", { width: "32", alt: "React", src: "https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg" }),
-								"Navbar"
+								"Calendar app"
 							),
 							_react2.default.createElement(
 								"button",

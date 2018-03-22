@@ -47,26 +47,29 @@ body {
 /* .test-block .row .col {
 	text-align: center;
 } */
-header nav {
-  background: linear-gradient(-10deg, #14194C, #1F3F64); }
-  header nav ul li a {
-    color: #ccc !important;
-    border-radius: 6px;
-    transition: color .5s, background-color .5s; }
-    header nav ul li a:hover:not(.activeLink) {
-      color: #fff !important; }
-  header nav > a {
-    margin-left: 50px; }
-    header nav > a img {
-      margin-right: 10px;
-      transform: translateY(-7%); }
-  header nav div {
-    margin-right: 50px; }
+header {
+  height: 60px; }
+  header nav {
+    background: linear-gradient(-10deg, #14194C, #1F3F64); }
+    header nav ul li a {
+      color: #ccc !important;
+      border-radius: 6px;
+      transition: color .5s, background-color .5s; }
+      header nav ul li a:hover:not(.activeLink) {
+        color: #fff !important; }
+    header nav > a {
+      margin-left: 50px; }
+      header nav > a img {
+        margin-right: 10px;
+        transform: translateY(-7%); }
+    header nav div {
+      margin-right: 50px; }
 
 section.about {
   color: #808080; }
   section.about h2 {
-    margin: 20px auto; }
+    margin: 20px auto;
+    text-align: center; }
   section.about ul {
     padding: 0; }
     section.about ul li {
@@ -95,6 +98,23 @@ section.about {
           display: none; }
         section.about ul li .row div:nth-child(2) > a {
           margin: 1rem auto; }
+
+section.calc {
+  color: #808080; }
+  section.calc .tblock {
+    background-color: green;
+    width: 600px;
+    margin: auto; }
+  section.calc .col h2 {
+    text-align: center;
+    margin: 20px auto; }
+  section.calc .col .calendar-block {
+    margin: auto; }
+  section.calc .col .range-block {
+    text-align: center; }
+    section.calc .col .range-block .counter-placeholder {
+      font-size: 50px;
+      margin: 0 20px; }
 
 @media (max-width: 575px) {
   header nav > a {
