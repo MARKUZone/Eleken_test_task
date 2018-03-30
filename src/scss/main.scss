@@ -157,15 +157,14 @@ section {
 			margin: 15px 0;
 			.row {
 				div:first-of-type {
+					justify-content: flex-start;
 					.icon-holder {
 						margin: 0;
 						svg {
 							margin-bottom: 0;
+							margin-right: 30px;
 						}
 					}
-				}
-				div:nth-of-type(2) {
-					justify-content: flex-start;
 					h4 {
 						margin: 1rem 0;
 					}
@@ -176,11 +175,20 @@ section {
 						position: relative;
 						width: 75%;
 						height: 60%;
+						max-width: 200px;
 						a {
+							justify-content: center;
+							margin: 0;
 							text-decoration: none;
+							text-align: center;
 							position: absolute;
 							width: 100%;
 							height: 100%;
+							text-transform: uppercase;
+							transition: background-color .5s;
+							&:hover {
+								background-color: rgba(128, 128, 128, 0.16);
+							}
 						}
 					}
 				}
@@ -234,6 +242,25 @@ section.calc {
 
 	.m0 {
 		margin: 0;
+	}
+
+	section.contacts {
+		li>*> {
+			div:first-of-type {
+				justify-content: center !important;
+				svg {
+					margin-left: 0 !important;
+				}
+			}
+			div:last-of-type {
+				height: 50px !important;
+				justify-content: center !important;
+				button {
+					width: 100% !important;
+					transform: translateY(-5px);
+				}
+			}
+		}
 	}
 }
 
