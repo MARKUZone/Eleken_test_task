@@ -46,7 +46,7 @@ function testClick() {
 
 
 // put shadow on hovered About block
-function aboutShadow() {
+function shadowOnHover() {
 	let squareElements = document.getElementsByClassName('shadow-aim');
 	Array.prototype.forEach.call(squareElements, item => {
 		shadow(item);
@@ -86,13 +86,13 @@ document.getElementById("test-button").onclick = () => {
 
 
 // correct page depending on navbar height
-function navbarHeight() {
+/*function navbarHeight() {
 	let height = document.getElementsByClassName('navbar')[0].offsetHeight;
 	console.log("height = " + height);
 }
 document.getElementsByClassName('navbar')[0].addEventListener('click', () => {
 	navbarHeight();
-});
+});*/
 
 
 

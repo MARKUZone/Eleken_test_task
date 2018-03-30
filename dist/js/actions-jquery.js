@@ -1,5 +1,5 @@
 // xslider animation after page load
-function aboutRevealer(section) {
+function slideRevealer(section) {
 	function xslider(item) {
 		$( item ).animate({
 			opacity: 1,
@@ -39,6 +39,13 @@ function aboutInteraction() {
 		});
 	}
 }
+
+
+
+// adds autohiding of revealed navbar menu on element click
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
 
 
 

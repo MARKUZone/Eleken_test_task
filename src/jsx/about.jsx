@@ -1,8 +1,8 @@
 class About extends React.Component {
 	
 	componentDidMount() {
-		aboutRevealer("about");
-		aboutShadow();
+		slideRevealer("about");
+		shadowOnHover();
 		aboutInteraction();
 	}
 

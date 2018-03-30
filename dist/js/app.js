@@ -76,7 +76,7 @@ var Navigation = function (_React$Component) {
 						null,
 						_react2.default.createElement(
 							"nav",
-							{ className: "navbar navbar-expand-sm navbar-dark bg-light" },
+							{ className: "navbar navbar-expand-sm navbar-dark bg-light shadow" },
 							_react2.default.createElement(
 								"a",
 								{ className: "navbar-brand", title: "Eleken test task", href: "#" },

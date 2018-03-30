@@ -24,8 +24,8 @@ var About = function (_React$Component) {
 	_createClass(About, [{
 		key: "componentDidMount",
 		value: function componentDidMount() {
-			aboutRevealer("about");
-			aboutShadow();
+			slideRevealer("about");
+			shadowOnHover();
 			aboutInteraction();
 		}
 	}, {
