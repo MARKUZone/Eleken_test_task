@@ -28,7 +28,30 @@ class Calc extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>This is Calculator page</h2>
+				<div className="Calc-comp">
+					<section className="calc">
+						<div className="container">
+							<div className="row">
+								<div className="col">
+									<h2>Calendar Day Range Counter</h2>
+									<div className="calendar-block">
+										<RangeCalendar
+											locale={ruRU}
+											onChange = { value => this.getRange(value) }
+										/>
+									</div>
+									<div className="range-block">
+										<RangeCounter 
+											date1={this.state.date1} 
+											date2={this.state.date2} 
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				{/*<h2>This is Calculator page</h2>
 				<RangeCalendar
 					locale={ruRU}
 					onChange = { value => this.getRange(value) }
@@ -36,7 +59,7 @@ class Calc extends React.Component {
 				<RangeCounter 
 					date1={this.state.date1} 
 					date2={this.state.date2} 
-				/>
+				/>*/}
 			</div>
 		);
 	}

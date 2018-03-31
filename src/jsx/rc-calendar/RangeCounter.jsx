@@ -5,9 +5,9 @@ import createReactClass from 'create-react-class';
 
 function Conclusion(props) {
 	if ( props.daysRange === 1 ) {
-		return <p>Day range is: 1 day.</p>;
+		return <p>Day range is: <span className="counter-placeholder" >1</span> day.</p>;
 	} else if ( props.daysRange > 1 ) {
-		return <p>Day range is: {props.daysRange} days.</p>;
+		return <p>Day range is: <span className="counter-placeholder" >{props.daysRange}</span> days.</p>;
 	} else {
 		return <p>Select dates to count date range.</p>;
 	}
@@ -56,7 +56,7 @@ class RangeCounter extends React.Component {
 		}
 		//console.log(day2, typeof(day2));
 		return (
-			<div className="range-counter">
+			<div className="range-counter dflex">
 			    {/*<p>This is date1: {this.props.date1}.</p>
 			    <p>This is date2: {this.props.date2}.</p>*/}
 			    <Conclusion daysRange={delta} />

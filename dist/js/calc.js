@@ -76,20 +76,48 @@ var Calc = function (_React$Component) {
 				'div',
 				null,
 				_react2.default.createElement(
-					'h2',
-					null,
-					'This is Calculator page'
-				),
-				_react2.default.createElement(_RangeCalendar2.default, {
-					locale: _ru_RU2.default,
-					onChange: function onChange(value) {
-						return _this2.getRange(value);
-					}
-				}),
-				_react2.default.createElement(_RangeCounter2.default, {
-					date1: this.state.date1,
-					date2: this.state.date2
-				})
+					'div',
+					{ className: 'Calc-comp' },
+					_react2.default.createElement(
+						'section',
+						{ className: 'calc' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'container' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'row' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'col' },
+									_react2.default.createElement(
+										'h2',
+										null,
+										'Calendar Day Range Counter'
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'calendar-block' },
+										_react2.default.createElement(_RangeCalendar2.default, {
+											locale: _ru_RU2.default,
+											onChange: function onChange(value) {
+												return _this2.getRange(value);
+											}
+										})
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'range-block' },
+										_react2.default.createElement(_RangeCounter2.default, {
+											date1: this.state.date1,
+											date2: this.state.date2
+										})
+									)
+								)
+							)
+						)
+					)
+				)
 			);
 		}
 	}]);

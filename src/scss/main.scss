@@ -152,6 +152,35 @@ section {
 			}
 		}
 	}
+	&.calc {
+		color: $text-color-1;
+		.tblock {
+			background-color: green;
+			width: 600px;
+			margin: auto;
+		}
+		.col {
+			h2 {
+				text-align: center;
+				margin: 20px auto;
+			}
+			.calendar-block {
+				margin: auto;
+			}
+			.range-block {
+				text-align: center;
+				height: 90px;
+				.range-counter {
+					height: inherit;
+					align-items: flex-end;
+				}
+				.counter-placeholder {
+					font-size: 50px;
+					margin: 0 20px;
+				}
+			}
+		}
+	}
 	&.contacts {
 		ul li {
 			margin: 15px 0;
@@ -198,32 +227,6 @@ section {
 }
 
 
-section.calc {
-	color: $text-color-1;
-	.tblock {
-		background-color: green;
-		width: 600px;
-		margin: auto;
-	}
-	.col {
-		h2 {
-			text-align: center;
-			margin: 20px auto;
-		}
-		.calendar-block {
-			margin: auto;
-		}
-		.range-block {
-			text-align: center;
-			.counter-placeholder {
-				font-size: 50px;
-				margin: 0 20px;
-			}
-		}
-	}
-}
-
-
 
 
 @media (max-width: 575px){
@@ -263,4 +266,6 @@ section.calc {
 		}
 	}
 }
+
+
 

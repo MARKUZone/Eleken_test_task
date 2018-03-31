@@ -81,6 +81,8 @@ Array.prototype.forEach.call(navbarLinks, (item, i, array) => {
 // test button
 document.getElementById("test-button").onclick = () => {
 	document.getElementsByClassName("test-el")[0].innerHTML = "some new text";
+	slideRevealer("contacts");
+	shadowOnHover();
 }
 
 

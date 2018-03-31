@@ -31,14 +31,24 @@ function Conclusion(props) {
 		return _react2.default.createElement(
 			'p',
 			null,
-			'Day range is: 1 day.'
+			'Day range is: ',
+			_react2.default.createElement(
+				'span',
+				{ className: 'counter-placeholder' },
+				'1'
+			),
+			' day.'
 		);
 	} else if (props.daysRange > 1) {
 		return _react2.default.createElement(
 			'p',
 			null,
 			'Day range is: ',
-			props.daysRange,
+			_react2.default.createElement(
+				'span',
+				{ className: 'counter-placeholder' },
+				props.daysRange
+			),
 			' days.'
 		);
 	} else {
@@ -100,7 +110,7 @@ var RangeCounter = function (_React$Component) {
 			//console.log(day2, typeof(day2));
 			return _react2.default.createElement(
 				'div',
-				{ className: 'range-counter' },
+				{ className: 'range-counter dflex' },
 				_react2.default.createElement(Conclusion, { daysRange: delta })
 			);
 		}

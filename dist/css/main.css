@@ -97,6 +97,26 @@ section {
             transition: transform .5s; }
         section ul li .row div:nth-child(2) .hide-block {
           display: none; }
+  section.calc {
+    color: #808080; }
+    section.calc .tblock {
+      background-color: green;
+      width: 600px;
+      margin: auto; }
+    section.calc .col h2 {
+      text-align: center;
+      margin: 20px auto; }
+    section.calc .col .calendar-block {
+      margin: auto; }
+    section.calc .col .range-block {
+      text-align: center;
+      height: 90px; }
+      section.calc .col .range-block .range-counter {
+        height: inherit;
+        align-items: flex-end; }
+      section.calc .col .range-block .counter-placeholder {
+        font-size: 50px;
+        margin: 0 20px; }
   section.contacts ul li {
     margin: 15px 0; }
     section.contacts ul li .row div:first-of-type {
@@ -127,23 +147,6 @@ section {
           transition: background-color .5s; }
           section.contacts ul li .row div:last-of-type button a:hover {
             background-color: rgba(128, 128, 128, 0.16); }
-
-section.calc {
-  color: #808080; }
-  section.calc .tblock {
-    background-color: green;
-    width: 600px;
-    margin: auto; }
-  section.calc .col h2 {
-    text-align: center;
-    margin: 20px auto; }
-  section.calc .col .calendar-block {
-    margin: auto; }
-  section.calc .col .range-block {
-    text-align: center; }
-    section.calc .col .range-block .counter-placeholder {
-      font-size: 50px;
-      margin: 0 20px; }
 
 @media (max-width: 575px) {
   header nav > a {
