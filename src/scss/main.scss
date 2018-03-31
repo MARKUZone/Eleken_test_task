@@ -169,10 +169,17 @@ section {
 			}
 			.range-block {
 				text-align: center;
-				height: 90px;
+				height: 70px;
 				.range-counter {
 					height: inherit;
 					align-items: flex-end;
+					overflow: hidden;
+					p {
+						margin-bottom: 0;
+						span {
+							line-height: 1;
+						}
+					}
 				}
 				.counter-placeholder {
 					font-size: 50px;

@@ -42039,6 +42039,18 @@ var Calc = function (_React$Component) {
 			}
 		}
 	}, {
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			slideRevealer("calc");
+			shadowOnHover();
+			aboutInteraction();
+		}
+	}, {
+		key: 'componentWillUnmount',
+		value: function componentWillUnmount() {
+			slideRevealer("calc");
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
@@ -42051,7 +42063,7 @@ var Calc = function (_React$Component) {
 					{ className: 'Calc-comp' },
 					_react2.default.createElement(
 						'section',
-						{ className: 'calc' },
+						{ className: 'calc xslider-container' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'container' },
@@ -42063,12 +42075,12 @@ var Calc = function (_React$Component) {
 									{ className: 'col' },
 									_react2.default.createElement(
 										'h2',
-										null,
+										{ className: 'xslider xslider1' },
 										'Calendar Day Range Counter'
 									),
 									_react2.default.createElement(
 										'div',
-										{ className: 'calendar-block' },
+										{ className: 'calendar-block dflex xslider xslider2' },
 										_react2.default.createElement(_RangeCalendar2.default, {
 											locale: _ru_RU2.default,
 											onChange: function onChange(value) {
@@ -42078,7 +42090,7 @@ var Calc = function (_React$Component) {
 									),
 									_react2.default.createElement(
 										'div',
-										{ className: 'range-block' },
+										{ className: 'range-block xslider xslider3' },
 										_react2.default.createElement(_RangeCounter2.default, {
 											date1: this.state.date1,
 											date2: this.state.date2
@@ -52115,34 +52127,7 @@ var RangeCounter = function (_React$Component) {
 		_classCallCheck(this, RangeCounter);
 
 		return _possibleConstructorReturn(this, (RangeCounter.__proto__ || Object.getPrototypeOf(RangeCounter)).call(this, props));
-		//this.daysCounter = this.daysCounter.bind(this);
 	}
-
-	/*shouldComponentUpdate(nextProps, nextState) {
- 	let day1 = this.props.date1;
- 	let day2 = this.props.date2;
- 	if (day2 != nextProps.date2 ) {
- 		let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
- 		delta = Math.floor(delta) + 1 ;
- 		this.setState({daysRange: delta});
- 		console.log(delta);
- 	}
- 	let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
- 	delta = Math.floor(delta) + 1 ;
- 	this.setState({daysRange: delta});
- 	console.log(delta);
- }*/
-
-	/*componentWillUpdate() {
- 	let day1 = this.props.date1;
- 	let day2 = this.props.date2;
- 	if ( !isNaN( day2 ) ) {
- 		let delta = ((Math.abs( day1 - day2 )) / ( 1000*3600*24 )) ;
- 		delta = Math.floor(delta) + 1 ;
- 		//this.setState({daysRange: delta});
- 		console.log(delta);
- 	};
- }*/
 
 	_createClass(RangeCounter, [{
 		key: 'render',
@@ -52153,9 +52138,7 @@ var RangeCounter = function (_React$Component) {
 			if (typeof day2 !== "string") {
 				delta = Math.abs(day1 - day2) / (1000 * 3600 * 24);
 				delta = Math.floor(delta) + 1;
-				//console.log(delta);
 			}
-			//console.log(day2, typeof(day2));
 			return _react2.default.createElement(
 				'div',
 				{ className: 'range-counter dflex' },

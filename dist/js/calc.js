@@ -68,6 +68,18 @@ var Calc = function (_React$Component) {
 			}
 		}
 	}, {
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			slideRevealer("calc");
+			shadowOnHover();
+			aboutInteraction();
+		}
+	}, {
+		key: 'componentWillUnmount',
+		value: function componentWillUnmount() {
+			slideRevealer("calc");
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
@@ -80,7 +92,7 @@ var Calc = function (_React$Component) {
 					{ className: 'Calc-comp' },
 					_react2.default.createElement(
 						'section',
-						{ className: 'calc' },
+						{ className: 'calc xslider-container' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'container' },
@@ -92,12 +104,12 @@ var Calc = function (_React$Component) {
 									{ className: 'col' },
 									_react2.default.createElement(
 										'h2',
-										null,
+										{ className: 'xslider xslider1' },
 										'Calendar Day Range Counter'
 									),
 									_react2.default.createElement(
 										'div',
-										{ className: 'calendar-block' },
+										{ className: 'calendar-block dflex xslider xslider2' },
 										_react2.default.createElement(_RangeCalendar2.default, {
 											locale: _ru_RU2.default,
 											onChange: function onChange(value) {
@@ -107,7 +119,7 @@ var Calc = function (_React$Component) {
 									),
 									_react2.default.createElement(
 										'div',
-										{ className: 'range-block' },
+										{ className: 'range-block xslider xslider3' },
 										_react2.default.createElement(_RangeCounter2.default, {
 											date1: this.state.date1,
 											date2: this.state.date2

@@ -110,10 +110,15 @@ section {
       margin: auto; }
     section.calc .col .range-block {
       text-align: center;
-      height: 90px; }
+      height: 70px; }
       section.calc .col .range-block .range-counter {
         height: inherit;
-        align-items: flex-end; }
+        align-items: flex-end;
+        overflow: hidden; }
+        section.calc .col .range-block .range-counter p {
+          margin-bottom: 0; }
+          section.calc .col .range-block .range-counter p span {
+            line-height: 1; }
       section.calc .col .range-block .counter-placeholder {
         font-size: 50px;
         margin: 0 20px; }

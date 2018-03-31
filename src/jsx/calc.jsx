@@ -25,22 +25,32 @@ class Calc extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		slideRevealer("calc");
+		shadowOnHover();
+		aboutInteraction();
+	}
+
+	componentWillUnmount() {
+		slideRevealer("calc");
+	}
+
 	render() {
 		return (
 			<div>
 				<div className="Calc-comp">
-					<section className="calc">
+					<section className="calc xslider-container">
 						<div className="container">
 							<div className="row">
 								<div className="col">
-									<h2>Calendar Day Range Counter</h2>
-									<div className="calendar-block">
+									<h2 className="xslider xslider1" >Calendar Day Range Counter</h2>
+									<div className="calendar-block dflex xslider xslider2">
 										<RangeCalendar
 											locale={ruRU}
 											onChange = { value => this.getRange(value) }
 										/>
 									</div>
-									<div className="range-block">
+									<div className="range-block xslider xslider3">
 										<RangeCounter 
 											date1={this.state.date1} 
 											date2={this.state.date2} 
