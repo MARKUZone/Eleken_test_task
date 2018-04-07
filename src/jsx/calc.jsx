@@ -31,10 +31,6 @@ class Calc extends React.Component {
 		aboutInteraction();
 	}
 
-	componentWillUnmount() {
-		slideRevealer("calc");
-	}
-
 	render() {
 		return (
 			<div>

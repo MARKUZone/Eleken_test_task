@@ -1,5 +1,9 @@
 class About extends React.Component {
-	
+
+	componentWillMount() {
+		delayedDnone("about");
+	}
+
 	componentDidMount() {
 		slideRevealer("about");
 		shadowOnHover();
@@ -7,9 +11,8 @@ class About extends React.Component {
 	}
 
 	render() {
-
 		return (
-			<div className="About-comp">
+			<div className="about-comp dnone away-aim">
 				<section className="about xslider-container">
 					<div className="container">
 						<div className="row m0">

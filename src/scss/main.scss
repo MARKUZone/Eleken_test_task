@@ -32,51 +32,30 @@ body {
 	background-color: #ffffffd6;
 }
 
-
-
-
 // test block with id=book
 .xslider-container{
 	overflow-x: hidden;
 	.xslider{
-		//background-color: #333;
-		//color: #eee;
 		position: relative;
 		opacity: 0;
 		transform: translateX(2400px);
 	}
 }
-#book-container{
-	//position: relative;
-	//overflow-x: hidden;
-	#book {
-		width: 200px;
-		/* background-color: #333;
-		color: #eee;
-		position: relative;
+
+.away-aim {
+	transition: transform .5s, opacity .5s, filter .5s;
+	&.away {
+		transform: scale(.5);
 		opacity: 0;
-		transform: translateX(2400px); */
+		filter: blur(5px);
 	}
 }
-// end of test block with id=book
+
+.dnone {
+	display: none;
+}
 
 
-
-/* .menu li {
-	display: inline-block;
-	margin: 0 50px;
-} */
-
-/* .home {
-	input {
-		margin: 2px;
-		background-color: #CCBD19FF;
-	}
-} */
-
-/* .test-block .row .col {
-	text-align: center;
-} */
 
 
 header{
@@ -100,6 +79,19 @@ header{
 		}
 		div {
 			margin-right: $margin-value;
+		}
+	}
+}
+
+
+.invitation {
+	//min-height: calc(100vh - 160px);
+	min-height: 330px;
+	.container {
+		min-height: inherit;
+		.row {
+			min-height:  inherit;
+			color: $link-black;
 		}
 	}
 }
@@ -253,6 +245,7 @@ section {
 	.m0 {
 		margin: 0;
 	}
+
 
 	section.contacts {
 		li>*> {

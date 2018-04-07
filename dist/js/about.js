@@ -22,6 +22,11 @@ var About = function (_React$Component) {
 	}
 
 	_createClass(About, [{
+		key: "componentWillMount",
+		value: function componentWillMount() {
+			delayedDnone("about");
+		}
+	}, {
 		key: "componentDidMount",
 		value: function componentDidMount() {
 			slideRevealer("about");
@@ -31,10 +36,9 @@ var About = function (_React$Component) {
 	}, {
 		key: "render",
 		value: function render() {
-
 			return React.createElement(
 				"div",
-				{ className: "About-comp" },
+				{ className: "about-comp dnone away-aim" },
 				React.createElement(
 					"section",
 					{ className: "about xslider-container" },

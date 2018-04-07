@@ -35,9 +35,6 @@ class Navigation extends React.Component{
 					
 					
 					<header>
-						{/*<div className="home">
-							<input type="button" />
-						</div>*/}
 						<nav className="navbar navbar-expand-sm navbar-dark bg-light shadow" >
 							<a className="navbar-brand" title="Eleken test task" href="#"><img width="32" alt="React" src="https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg"/>Calendar app</a>
 							<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

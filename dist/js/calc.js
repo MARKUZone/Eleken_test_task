@@ -75,11 +75,6 @@ var Calc = function (_React$Component) {
 			aboutInteraction();
 		}
 	}, {
-		key: 'componentWillUnmount',
-		value: function componentWillUnmount() {
-			slideRevealer("calc");
-		}
-	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;

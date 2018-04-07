@@ -65,6 +65,7 @@ function shadowOnHover() {
 
 // keeps navbar link active while not switched to another link
 let navbarLinks = document.getElementsByClassName('nav-link');
+let awayElements = document.getElementsByClassName('away-aim');
 Array.prototype.forEach.call(navbarLinks, (item, i, array) => {
 	item.addEventListener('click', function () {
 		this.classList.add('activeLink');
@@ -73,16 +74,30 @@ Array.prototype.forEach.call(navbarLinks, (item, i, array) => {
 				item2.classList.remove('activeLink');
 			}
 		});
+		Array.prototype.forEach.call(awayElements, (item, i, array) => {
+			item.classList.add('away');
+		});
 	});
 });
 
 
 
 // test button
+let counter = 0;
 document.getElementById("test-button").onclick = () => {
-	document.getElementsByClassName("test-el")[0].innerHTML = "some new text";
-	slideRevealer("contacts");
-	shadowOnHover();
+	counter++;
+	document.getElementsByClassName("test-el")[0].innerHTML = "button function worked: " + counter;
+	document.getElementsByClassName("away-aim")[0].classList.toggle("away");
+}
+
+
+
+// display: none 0.5 sec before comp mount
+function delayedDnone(section) {
+	setTimeout(function() {
+		document.getElementsByClassName(section + '-comp')[0].classList.remove('dnone');
+		document.getElementsByClassName("invitation")[0].classList.add('dnone');
+	}, 500);
 }
 
 
