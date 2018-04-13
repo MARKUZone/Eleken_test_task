@@ -71,7 +71,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
-													React.createElement("i", { className: "fab fa-facebook-f" })
+													React.createElement("i", { "class": "fas fa-mobile-alt" })
 												),
 												React.createElement(
 													"h4",
@@ -106,7 +106,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
-													React.createElement("i", { className: "fab fa-facebook-f" })
+													React.createElement("i", { "class": "fas fa-at" })
 												),
 												React.createElement(
 													"h4",
@@ -141,7 +141,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
-													React.createElement("i", { className: "fab fa-facebook-f" })
+													React.createElement("img", { src: "/ref/Djinni_Logo.svg", alt: "" })
 												),
 												React.createElement(
 													"h4",
@@ -157,7 +157,7 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "https://djinni.co/", className: "dflex", target: "_blank" },
+														{ href: "put here link!", className: "dflex", target: "_blank" },
 														"Visit page"
 													)
 												)
@@ -176,7 +176,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
-													React.createElement("i", { className: "fab fa-facebook-f" })
+													React.createElement("i", { "class": "fab fa-github" })
 												),
 												React.createElement(
 													"h4",
@@ -211,7 +211,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
-													React.createElement("i", { className: "fab fa-facebook-f" })
+													React.createElement("i", { "class": "far fa-file-pdf" })
 												),
 												React.createElement(
 													"h4",
@@ -259,7 +259,7 @@ var Contacts = function (_React$Component) {
 															{ type: "submit", className: "dflex" },
 															React.createElement(
 																"a",
-																{ href: "https://goo.gl/", className: "dflex", target: "_blank" },
+																{ href: "https://goo.gl/aAZbsM", className: "dflex", target: "_blank" },
 																"Ukrainian"
 															)
 														)
@@ -280,7 +280,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
-													React.createElement("i", { className: "fab fa-facebook-f" })
+													React.createElement("i", { "class": "fas fa-code" })
 												),
 												React.createElement(
 													"h4",

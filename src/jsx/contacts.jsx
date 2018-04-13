@@ -23,7 +23,7 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col dflex">
 												<div className="icon-holder">
-													<i className="fab fa-facebook-f"></i>
+													<i class="fas fa-mobile-alt"></i>
 												</div>
 												<h4>Phone</h4>
 											</div>
@@ -38,7 +38,7 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col dflex">
 												<div className="icon-holder">
-													<i className="fab fa-facebook-f"></i>
+													<i class="fas fa-at"></i>
 												</div>
 												<h4>Email</h4>
 											</div>
@@ -53,13 +53,13 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col dflex">
 												<div className="icon-holder">
-													<i className="fab fa-facebook-f"></i>
+													<img src="/ref/Djinni_Logo.svg" alt="" ></img>
 												</div>
 												<h4>djinni.co profile</h4>
 											</div>
 											<div className="col-12 col-sm dflex">
 												<button type="submit" className="dflex">
-													<a href="https://djinni.co/" className="dflex" target="_blank" >Visit page</a>
+													<a href="put here link!" className="dflex" target="_blank" >Visit page</a>
 												</button>
 											</div>
 										</div>
@@ -68,7 +68,7 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col dflex">
 												<div className="icon-holder">
-													<i className="fab fa-facebook-f"></i>
+													<i class="fab fa-github"></i>
 												</div>
 												<h4>GitHub profile</h4>
 											</div>
@@ -83,7 +83,7 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col-12 col-sm-6 dflex">
 												<div className="icon-holder">
-													<i className="fab fa-facebook-f"></i>
+													<i class="far fa-file-pdf"></i>
 												</div>
 												<h4>PDF CVs</h4>
 											</div>
@@ -101,7 +101,7 @@ class Contacts extends React.Component {
 													</div>
 													<div className="col-12 col-lg-4 dflex">
 														<button type="submit" className="dflex">
-															<a href="https://goo.gl/" className="dflex" target="_blank" >Ukrainian</a>
+															<a href="https://goo.gl/aAZbsM" className="dflex" target="_blank" >Ukrainian</a>
 														</button>
 													</div>
 												</div>
@@ -112,7 +112,7 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col-12 col-sm-6 dflex">
 												<div className="icon-holder">
-													<i className="fab fa-facebook-f"></i>
+													<i class="fas fa-code"></i>
 												</div>
 												<h4>My other works</h4>
 											</div>
