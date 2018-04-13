@@ -68,6 +68,11 @@ var Calc = function (_React$Component) {
 			}
 		}
 	}, {
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			delayedDnone("calc");
+		}
+	}, {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
 			slideRevealer("calc");
@@ -84,7 +89,7 @@ var Calc = function (_React$Component) {
 				null,
 				_react2.default.createElement(
 					'div',
-					{ className: 'Calc-comp' },
+					{ className: 'calc-comp dnone away-aim' },
 					_react2.default.createElement(
 						'section',
 						{ className: 'calc xslider-container' },

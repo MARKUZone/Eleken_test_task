@@ -25,6 +25,10 @@ class Calc extends React.Component {
 		}
 	}
 
+	componentWillMount() {
+		delayedDnone("calc");
+	}
+
 	componentDidMount() {
 		slideRevealer("calc");
 		shadowOnHover();
@@ -34,7 +38,7 @@ class Calc extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="Calc-comp">
+				<div className="calc-comp dnone away-aim">
 					<section className="calc xslider-container">
 						<div className="container">
 							<div className="row">

@@ -5174,6 +5174,18 @@ module.exports = emptyFunction;
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5200,18 +5212,6 @@ exports.default = _assign2.default || function (target) {
 
   return target;
 };
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-var global = module.exports = typeof window != 'undefined' && window.Math == Math
-  ? window : typeof self != 'undefined' && self.Math == Math ? self
-  // eslint-disable-next-line no-new-func
-  : Function('return this')();
-if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
-
 
 /***/ }),
 /* 14 */
@@ -5327,7 +5327,7 @@ module.exports = invariant;
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(13);
+var global = __webpack_require__(12);
 var core = __webpack_require__(14);
 var ctx = __webpack_require__(77);
 var hide = __webpack_require__(20);
@@ -5431,7 +5431,7 @@ module.exports = function (it) {
 
 var store = __webpack_require__(51)('wks');
 var uid = __webpack_require__(36);
-var Symbol = __webpack_require__(13).Symbol;
+var Symbol = __webpack_require__(12).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
 
 var $exports = module.exports = function (name) {
@@ -6338,7 +6338,7 @@ module.exports = function (exec) {
 
 exports.__esModule = true;
 
-var _extends2 = __webpack_require__(12);
+var _extends2 = __webpack_require__(13);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
@@ -7202,7 +7202,7 @@ module.exports = function (key) {
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(13);
+var global = __webpack_require__(12);
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
 module.exports = function (key) {
@@ -7312,7 +7312,7 @@ exports.f = __webpack_require__(23);
 /* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(13);
+var global = __webpack_require__(12);
 var core = __webpack_require__(14);
 var LIBRARY = __webpack_require__(54);
 var wksExt = __webpack_require__(58);
@@ -8728,7 +8728,7 @@ module.exports = !__webpack_require__(16) && !__webpack_require__(31)(function (
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(21);
-var document = __webpack_require__(13).document;
+var document = __webpack_require__(12).document;
 // typeof document.createElement is 'object' in old IE
 var is = isObject(document) && isObject(document.createElement);
 module.exports = function (it) {
@@ -9104,7 +9104,7 @@ LazyRenderBox.propTypes = {
 /* harmony export (immutable) */ __webpack_exports__["a"] = getAlignFromPlacement;
 /* harmony export (immutable) */ __webpack_exports__["b"] = getPopupClassNameFromAlign;
 /* harmony export (immutable) */ __webpack_exports__["c"] = saveRef;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
 
 function isPointsEq(a1, a2) {
@@ -42043,6 +42043,11 @@ var Calc = function (_React$Component) {
 			}
 		}
 	}, {
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			delayedDnone("calc");
+		}
+	}, {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
 			slideRevealer("calc");
@@ -42059,7 +42064,7 @@ var Calc = function (_React$Component) {
 				null,
 				_react2.default.createElement(
 					'div',
-					{ className: 'Calc-comp' },
+					{ className: 'calc-comp dnone away-aim' },
 					_react2.default.createElement(
 						'section',
 						{ className: 'calc xslider-container' },
@@ -44622,7 +44627,7 @@ module.exports = exports['default'];
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
@@ -45848,7 +45853,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
@@ -46202,7 +46207,7 @@ module.exports = __webpack_require__(16) ? Object.defineProperties : function de
 /* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var document = __webpack_require__(13).document;
+var document = __webpack_require__(12).document;
 module.exports = document && document.documentElement;
 
 
@@ -46230,7 +46235,7 @@ module.exports = Object.getPrototypeOf || function (O) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(293);
-var global = __webpack_require__(13);
+var global = __webpack_require__(12);
 var hide = __webpack_require__(20);
 var Iterators = __webpack_require__(55);
 var TO_STRING_TAG = __webpack_require__(23)('toStringTag');
@@ -46331,7 +46336,7 @@ module.exports = __webpack_require__(14).Symbol;
 "use strict";
 
 // ECMAScript 6 symbols shim
-var global = __webpack_require__(13);
+var global = __webpack_require__(12);
 var has = __webpack_require__(17);
 var DESCRIPTORS = __webpack_require__(16);
 var $export = __webpack_require__(19);
@@ -47575,7 +47580,7 @@ function isWindow(obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__);
@@ -48817,7 +48822,7 @@ exports.default = function (obj, keys) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = getContainerRenderMixin;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -49041,11 +49046,13 @@ module.exports = exports['default'];
 "use strict";
 
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-var _extends2 = __webpack_require__(12);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _extends3 = _interopRequireDefault(_extends2);
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _react = __webpack_require__(1);
 
@@ -49089,7 +49096,17 @@ var _CommonMixin2 = _interopRequireDefault(_CommonMixin);
 
 var _util = __webpack_require__(32);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+//import RangeCounter from '../../../dist/js/rc-calendar/RangeCounter';
+//import myPrinter from '../../../dist/js/myPrinter';
+
+
+var myTestVar = "Test var is working!";
 
 function noop() {}
 
@@ -49113,8 +49130,9 @@ function isArraysEqual(a, b) {
 }
 
 function getValueFromSelectedValue(selectedValue) {
-  var start = selectedValue[0],
-      end = selectedValue[1];
+  var _selectedValue = _slicedToArray(selectedValue, 2),
+      start = _selectedValue[0],
+      end = _selectedValue[1];
 
   var newEnd = end && end.isSame(start, 'month') ? end.clone().add(1, 'month') : end;
   return [start, newEnd];
@@ -49124,7 +49142,7 @@ function normalizeAnchor(props, init) {
   var selectedValue = props.selectedValue || init && props.defaultSelectedValue;
   var value = props.value || init && props.defaultValue;
   var normalizedValue = value ? getValueFromSelectedValue(value) : getValueFromSelectedValue(selectedValue);
-  return !isEmptyArray(normalizedValue) ? normalizedValue : init && [(0, _moment2['default'])(), (0, _moment2['default'])().add(1, 'months')];
+  return !isEmptyArray(normalizedValue) ? normalizedValue : init && [(0, _moment2.default)(), (0, _moment2.default)().add(1, 'months')];
 }
 
 function generateOptions(length, extraOptionGen) {
@@ -49152,38 +49170,38 @@ function onInputSelect(direction, value) {
   this.fireSelectValueChange(selectedValue);
 }
 
-var RangeCalendar = (0, _createReactClass2['default'])({
+var RangeCalendar = (0, _createReactClass2.default)({
   displayName: 'RangeCalendar',
 
   propTypes: {
-    prefixCls: _propTypes2['default'].string,
-    dateInputPlaceholder: _propTypes2['default'].any,
-    defaultValue: _propTypes2['default'].any,
-    value: _propTypes2['default'].any,
-    hoverValue: _propTypes2['default'].any,
-    mode: _propTypes2['default'].arrayOf(_propTypes2['default'].oneOf(['date', 'month', 'year', 'decade'])),
-    showDateInput: _propTypes2['default'].bool,
-    timePicker: _propTypes2['default'].any,
-    showOk: _propTypes2['default'].bool,
-    showToday: _propTypes2['default'].bool,
-    defaultSelectedValue: _propTypes2['default'].array,
-    selectedValue: _propTypes2['default'].array,
-    onOk: _propTypes2['default'].func,
-    showClear: _propTypes2['default'].bool,
-    locale: _propTypes2['default'].object,
-    onChange: _propTypes2['default'].func,
-    onSelect: _propTypes2['default'].func,
-    onValueChange: _propTypes2['default'].func,
-    onHoverChange: _propTypes2['default'].func,
-    onPanelChange: _propTypes2['default'].func,
-    format: _propTypes2['default'].oneOfType([_propTypes2['default'].object, _propTypes2['default'].string]),
-    onClear: _propTypes2['default'].func,
-    type: _propTypes2['default'].any,
-    disabledDate: _propTypes2['default'].func,
-    disabledTime: _propTypes2['default'].func
+    prefixCls: _propTypes2.default.string,
+    dateInputPlaceholder: _propTypes2.default.any,
+    defaultValue: _propTypes2.default.any,
+    value: _propTypes2.default.any,
+    hoverValue: _propTypes2.default.any,
+    mode: _propTypes2.default.arrayOf(_propTypes2.default.oneOf(['date', 'month', 'year', 'decade'])),
+    showDateInput: _propTypes2.default.bool,
+    timePicker: _propTypes2.default.any,
+    showOk: _propTypes2.default.bool,
+    showToday: _propTypes2.default.bool,
+    defaultSelectedValue: _propTypes2.default.array,
+    selectedValue: _propTypes2.default.array,
+    onOk: _propTypes2.default.func,
+    showClear: _propTypes2.default.bool,
+    locale: _propTypes2.default.object,
+    onChange: _propTypes2.default.func,
+    onSelect: _propTypes2.default.func,
+    onValueChange: _propTypes2.default.func,
+    onHoverChange: _propTypes2.default.func,
+    onPanelChange: _propTypes2.default.func,
+    format: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.string]),
+    onClear: _propTypes2.default.func,
+    type: _propTypes2.default.any,
+    disabledDate: _propTypes2.default.func,
+    disabledTime: _propTypes2.default.func
   },
 
-  mixins: [_CommonMixin2['default']],
+  mixins: [_CommonMixin2.default],
 
   getDefaultProps: function getDefaultProps() {
     return {
@@ -49338,12 +49356,12 @@ var RangeCalendar = (0, _createReactClass2['default'])({
     return onInputSelect.apply(this, args);
   },
   onStartValueChange: function onStartValueChange(leftValue) {
-    var value = [].concat(this.state.value);
+    var value = [].concat(_toConsumableArray(this.state.value));
     value[0] = leftValue;
     return this.fireValueChange(value);
   },
   onEndValueChange: function onEndValueChange(rightValue) {
-    var value = [].concat(this.state.value);
+    var value = [].concat(_toConsumableArray(this.state.value));
     value[1] = rightValue;
     return this.fireValueChange(value);
   },
@@ -49486,7 +49504,7 @@ var RangeCalendar = (0, _createReactClass2['default'])({
 
     // 尚未选择过时间，直接输入的话
     if (!this.state.selectedValue[0] || !this.state.selectedValue[1]) {
-      var startValue = selectedValue[0] || (0, _moment2['default'])();
+      var startValue = selectedValue[0] || (0, _moment2.default)();
       var endValue = selectedValue[1] || startValue.clone().add(1, 'months');
       this.setState({
         selectedValue: selectedValue,
@@ -49499,6 +49517,18 @@ var RangeCalendar = (0, _createReactClass2['default'])({
       this.fireHoverValueChange(selectedValue.concat());
     }
     this.props.onChange(selectedValue);
+
+    // ------------------   My test lines
+    /*   let myInt = {
+         "selectedValue": selectedValue,
+         "selectedValue[0]": selectedValue[0],
+         "this.state.selectedValue": this.state.selectedValue,
+         "this.state.selectedValue[0]": this.state.selectedValue[0]
+       }
+       myPrinter(myInt);*/
+    // ------------------   End of test lines
+
+
     if (direct || selectedValue[0] && selectedValue[1]) {
       this.setState({
         prevSelectedValue: selectedValue,
@@ -49562,8 +49592,8 @@ var RangeCalendar = (0, _createReactClass2['default'])({
         mode = state.mode,
         showTimePicker = state.showTimePicker;
 
-    var className = (_className = {}, _className[props.className] = !!props.className, _className[prefixCls] = 1, _className[prefixCls + '-hidden'] = !props.visible, _className[prefixCls + '-range'] = 1, _className[prefixCls + '-show-time-picker'] = showTimePicker, _className[prefixCls + '-week-number'] = props.showWeekNumber, _className);
-    var classes = (0, _classnames3['default'])(className);
+    var className = (_className = {}, _defineProperty(_className, props.className, !!props.className), _defineProperty(_className, prefixCls, 1), _defineProperty(_className, prefixCls + '-hidden', !props.visible), _defineProperty(_className, prefixCls + '-range', 1), _defineProperty(_className, prefixCls + '-show-time-picker', showTimePicker), _defineProperty(_className, prefixCls + '-week-number', props.showWeekNumber), _className);
+    var classes = (0, _classnames3.default)(className);
     var newProps = {
       selectedValue: state.selectedValue,
       onSelect: this.onSelect,
@@ -49575,14 +49605,16 @@ var RangeCalendar = (0, _createReactClass2['default'])({
 
     if (dateInputPlaceholder) {
       if (Array.isArray(dateInputPlaceholder)) {
-        placeholder1 = dateInputPlaceholder[0];
-        placeholder2 = dateInputPlaceholder[1];
+        var _dateInputPlaceholder = _slicedToArray(dateInputPlaceholder, 2);
+
+        placeholder1 = _dateInputPlaceholder[0];
+        placeholder2 = _dateInputPlaceholder[1];
       } else {
         placeholder1 = placeholder2 = dateInputPlaceholder;
       }
     }
     var showOkButton = showOk === true || showOk !== false && !!timePicker;
-    var cls = (0, _classnames3['default'])((_classnames = {}, _classnames[prefixCls + '-footer'] = true, _classnames[prefixCls + '-range-bottom'] = true, _classnames[prefixCls + '-footer-show-ok'] = showOkButton, _classnames));
+    var cls = (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, prefixCls + '-footer', true), _defineProperty(_classnames, prefixCls + '-range-bottom', true), _defineProperty(_classnames, prefixCls + '-footer-show-ok', showOkButton), _classnames));
 
     var startValue = this.getStartValue();
     var endValue = this.getEndValue();
@@ -49592,7 +49624,8 @@ var RangeCalendar = (0, _createReactClass2['default'])({
     var isTodayInView = startValue.year() === thisYear && startValue.month() === thisMonth || endValue.year() === thisYear && endValue.month() === thisMonth;
     var nextMonthOfStart = startValue.clone().add(1, 'months');
     var isClosestMonths = nextMonthOfStart.year() === endValue.year() && nextMonthOfStart.month() === endValue.month();
-    return _react2['default'].createElement(
+
+    return _react2.default.createElement(
       'div',
       {
         ref: this.saveRoot,
@@ -49601,23 +49634,23 @@ var RangeCalendar = (0, _createReactClass2['default'])({
         tabIndex: '0'
       },
       props.renderSidebar(),
-      _react2['default'].createElement(
+      _react2.default.createElement(
         'div',
         { className: prefixCls + '-panel' },
-        showClear && selectedValue[0] && selectedValue[1] ? _react2['default'].createElement('a', {
+        showClear && selectedValue[0] && selectedValue[1] ? _react2.default.createElement('a', {
           className: prefixCls + '-clear-btn',
           role: 'button',
           title: locale.clear,
           onClick: this.clear
         }) : null,
-        _react2['default'].createElement(
+        _react2.default.createElement(
           'div',
           {
             className: prefixCls + '-date-panel',
             onMouseLeave: type !== 'both' ? this.onDatePanelLeave : undefined,
             onMouseEnter: type !== 'both' ? this.onDatePanelEnter : undefined
           },
-          _react2['default'].createElement(_CalendarPart2['default'], (0, _extends3['default'])({}, props, newProps, {
+          _react2.default.createElement(_CalendarPart2.default, _extends({}, props, newProps, {
             hoverValue: hoverValue,
             direction: 'left',
             disabledTime: this.disabledStartTime,
@@ -49635,12 +49668,12 @@ var RangeCalendar = (0, _createReactClass2['default'])({
             enablePrev: true,
             enableNext: !isClosestMonths || this.isMonthYearPanelShow(mode[1])
           })),
-          _react2['default'].createElement(
+          _react2.default.createElement(
             'span',
             { className: prefixCls + '-range-middle' },
             '~'
           ),
-          _react2['default'].createElement(_CalendarPart2['default'], (0, _extends3['default'])({}, props, newProps, {
+          _react2.default.createElement(_CalendarPart2.default, _extends({}, props, newProps, {
             hoverValue: hoverValue,
             direction: 'right',
             format: this.getFormat(),
@@ -49660,26 +49693,26 @@ var RangeCalendar = (0, _createReactClass2['default'])({
             enableNext: true
           }))
         ),
-        _react2['default'].createElement(
+        _react2.default.createElement(
           'div',
           { className: cls },
           props.renderFooter(),
-          showToday || props.timePicker || showOkButton ? _react2['default'].createElement(
+          showToday || props.timePicker || showOkButton ? _react2.default.createElement(
             'div',
             { className: prefixCls + '-footer-btn' },
-            showToday ? _react2['default'].createElement(_TodayButton2['default'], (0, _extends3['default'])({}, props, {
+            showToday ? _react2.default.createElement(_TodayButton2.default, _extends({}, props, {
               disabled: isTodayInView,
               value: state.value[0],
               onToday: this.onToday,
               text: locale.backToToday
             })) : null,
-            props.timePicker ? _react2['default'].createElement(_TimePickerButton2['default'], (0, _extends3['default'])({}, props, {
+            props.timePicker ? _react2.default.createElement(_TimePickerButton2.default, _extends({}, props, {
               showTimePicker: showTimePicker,
               onOpenTimePicker: this.onOpenTimePicker,
               onCloseTimePicker: this.onCloseTimePicker,
               timePickerDisabled: !this.hasSelectedValue() || hoverValue.length
             })) : null,
-            showOkButton ? _react2['default'].createElement(_OkButton2['default'], (0, _extends3['default'])({}, props, {
+            showOkButton ? _react2.default.createElement(_OkButton2.default, _extends({}, props, {
               onOk: this.onOk,
               okDisabled: !this.isAllowedDateAndTime(selectedValue) || !this.hasSelectedValue() || hoverValue.length
             })) : null
@@ -49690,8 +49723,8 @@ var RangeCalendar = (0, _createReactClass2['default'])({
   }
 });
 
-exports['default'] = RangeCalendar;
-module.exports = exports['default'];
+exports.default = RangeCalendar;
+//export {myTestVar};
 
 /***/ }),
 /* 339 */
@@ -49990,7 +50023,7 @@ webpackContext.id = 340;
 
 exports.__esModule = true;
 
-var _extends2 = __webpack_require__(12);
+var _extends2 = __webpack_require__(13);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
@@ -52180,6 +52213,11 @@ var Contacts = function (_React$Component) {
 	}
 
 	_createClass(Contacts, [{
+		key: "componentWillMount",
+		value: function componentWillMount() {
+			delayedDnone("contacts");
+		}
+	}, {
 		key: "componentDidMount",
 		value: function componentDidMount() {
 			slideRevealer("contacts");
@@ -52191,7 +52229,7 @@ var Contacts = function (_React$Component) {
 		value: function render() {
 			return React.createElement(
 				"div",
-				{ className: "Contacts-comp" },
+				{ className: "contacts-comp dnone away-aim" },
 				React.createElement(
 					"section",
 					{ className: "contacts xslider-container" },
@@ -52229,7 +52267,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"h4",
 													null,
-													"Facebook"
+													"Phone"
 												)
 											),
 											React.createElement(
@@ -52240,8 +52278,8 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "#", className: "dflex" },
-														"visit page"
+														{ href: "tel:+38-095-344-94-16", className: "dflex", target: "_blank" },
+														"Call me"
 													)
 												)
 											)
@@ -52264,7 +52302,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"h4",
 													null,
-													"Facebook"
+													"Email"
 												)
 											),
 											React.createElement(
@@ -52275,8 +52313,8 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "#", className: "dflex" },
-														"visit page"
+														{ href: "mailto:2545442@gmail.com", className: "dflex", target: "_blank" },
+														"Write me"
 													)
 												)
 											)
@@ -52299,7 +52337,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"h4",
 													null,
-													"Facebook"
+													"djinni.co profile"
 												)
 											),
 											React.createElement(
@@ -52310,8 +52348,152 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "#", className: "dflex" },
-														"visit page"
+														{ href: "https://djinni.co/", className: "dflex", target: "_blank" },
+														"Visit page"
+													)
+												)
+											)
+										)
+									),
+									React.createElement(
+										"li",
+										{ className: "xslider xslider5" },
+										React.createElement(
+											"div",
+											{ className: "row shadow-aim" },
+											React.createElement(
+												"div",
+												{ className: "col dflex" },
+												React.createElement(
+													"div",
+													{ className: "icon-holder" },
+													React.createElement("i", { className: "fab fa-facebook-f" })
+												),
+												React.createElement(
+													"h4",
+													null,
+													"GitHub profile"
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://github.com/MARKUZone", className: "dflex", target: "_blank" },
+														"Visit page"
+													)
+												)
+											)
+										)
+									),
+									React.createElement(
+										"li",
+										{ className: "xslider xslider6" },
+										React.createElement(
+											"div",
+											{ className: "row shadow-aim" },
+											React.createElement(
+												"div",
+												{ className: "col dflex" },
+												React.createElement(
+													"div",
+													{ className: "icon-holder" },
+													React.createElement("i", { className: "fab fa-facebook-f" })
+												),
+												React.createElement(
+													"h4",
+													null,
+													"PDF CVs"
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://goo.gl/5oNMnW", className: "dflex", target: "_blank" },
+														"English"
+													)
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://goo.gl/ccGs16", className: "dflex", target: "_blank" },
+														"Russian"
+													)
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://goo.gl/", className: "dflex", target: "_blank" },
+														"Ukrainian"
+													)
+												)
+											)
+										)
+									),
+									React.createElement(
+										"li",
+										{ className: "xslider xslider7" },
+										React.createElement(
+											"div",
+											{ className: "row shadow-aim" },
+											React.createElement(
+												"div",
+												{ className: "col dflex" },
+												React.createElement(
+													"div",
+													{ className: "icon-holder" },
+													React.createElement("i", { className: "fab fa-facebook-f" })
+												),
+												React.createElement(
+													"h4",
+													null,
+													"My other works"
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://markuzone.github.io/React_calculator/", className: "dflex", target: "_blank" },
+														"React Calculator"
+													)
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://markuzone.github.io/", className: "dflex", target: "_blank" },
+														"Adaptive Watchshop website"
 													)
 												)
 											)

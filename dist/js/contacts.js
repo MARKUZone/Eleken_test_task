@@ -22,6 +22,11 @@ var Contacts = function (_React$Component) {
 	}
 
 	_createClass(Contacts, [{
+		key: "componentWillMount",
+		value: function componentWillMount() {
+			delayedDnone("contacts");
+		}
+	}, {
 		key: "componentDidMount",
 		value: function componentDidMount() {
 			slideRevealer("contacts");
@@ -33,7 +38,7 @@ var Contacts = function (_React$Component) {
 		value: function render() {
 			return React.createElement(
 				"div",
-				{ className: "Contacts-comp" },
+				{ className: "contacts-comp dnone away-aim" },
 				React.createElement(
 					"section",
 					{ className: "contacts xslider-container" },
@@ -71,7 +76,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"h4",
 													null,
-													"Facebook"
+													"Phone"
 												)
 											),
 											React.createElement(
@@ -82,8 +87,8 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "#", className: "dflex" },
-														"visit page"
+														{ href: "tel:+38-095-344-94-16", className: "dflex", target: "_blank" },
+														"Call me"
 													)
 												)
 											)
@@ -106,7 +111,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"h4",
 													null,
-													"Facebook"
+													"Email"
 												)
 											),
 											React.createElement(
@@ -117,8 +122,8 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "#", className: "dflex" },
-														"visit page"
+														{ href: "mailto:2545442@gmail.com", className: "dflex", target: "_blank" },
+														"Write me"
 													)
 												)
 											)
@@ -141,7 +146,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"h4",
 													null,
-													"Facebook"
+													"djinni.co profile"
 												)
 											),
 											React.createElement(
@@ -152,8 +157,152 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "#", className: "dflex" },
-														"visit page"
+														{ href: "https://djinni.co/", className: "dflex", target: "_blank" },
+														"Visit page"
+													)
+												)
+											)
+										)
+									),
+									React.createElement(
+										"li",
+										{ className: "xslider xslider5" },
+										React.createElement(
+											"div",
+											{ className: "row shadow-aim" },
+											React.createElement(
+												"div",
+												{ className: "col dflex" },
+												React.createElement(
+													"div",
+													{ className: "icon-holder" },
+													React.createElement("i", { className: "fab fa-facebook-f" })
+												),
+												React.createElement(
+													"h4",
+													null,
+													"GitHub profile"
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://github.com/MARKUZone", className: "dflex", target: "_blank" },
+														"Visit page"
+													)
+												)
+											)
+										)
+									),
+									React.createElement(
+										"li",
+										{ className: "xslider xslider6" },
+										React.createElement(
+											"div",
+											{ className: "row shadow-aim" },
+											React.createElement(
+												"div",
+												{ className: "col dflex" },
+												React.createElement(
+													"div",
+													{ className: "icon-holder" },
+													React.createElement("i", { className: "fab fa-facebook-f" })
+												),
+												React.createElement(
+													"h4",
+													null,
+													"PDF CVs"
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://goo.gl/5oNMnW", className: "dflex", target: "_blank" },
+														"English"
+													)
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://goo.gl/ccGs16", className: "dflex", target: "_blank" },
+														"Russian"
+													)
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://goo.gl/", className: "dflex", target: "_blank" },
+														"Ukrainian"
+													)
+												)
+											)
+										)
+									),
+									React.createElement(
+										"li",
+										{ className: "xslider xslider7" },
+										React.createElement(
+											"div",
+											{ className: "row shadow-aim" },
+											React.createElement(
+												"div",
+												{ className: "col dflex" },
+												React.createElement(
+													"div",
+													{ className: "icon-holder" },
+													React.createElement("i", { className: "fab fa-facebook-f" })
+												),
+												React.createElement(
+													"h4",
+													null,
+													"My other works"
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://markuzone.github.io/React_calculator/", className: "dflex", target: "_blank" },
+														"React Calculator"
+													)
+												)
+											),
+											React.createElement(
+												"div",
+												{ className: "col-12 col-sm-3 dflex" },
+												React.createElement(
+													"button",
+													{ type: "submit", className: "dflex" },
+													React.createElement(
+														"a",
+														{ href: "https://markuzone.github.io/", className: "dflex", target: "_blank" },
+														"Adaptive Watchshop website"
 													)
 												)
 											)
