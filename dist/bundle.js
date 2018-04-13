@@ -52398,7 +52398,7 @@ var Contacts = function (_React$Component) {
 											{ className: "row shadow-aim" },
 											React.createElement(
 												"div",
-												{ className: "col dflex" },
+												{ className: "col-12 col-sm-6 dflex" },
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
@@ -52412,40 +52412,48 @@ var Contacts = function (_React$Component) {
 											),
 											React.createElement(
 												"div",
-												{ className: "col-12 col-sm-3 dflex" },
+												{ className: "col-12 col-sm-6 dflex" },
 												React.createElement(
-													"button",
-													{ type: "submit", className: "dflex" },
+													"div",
+													{ className: "row" },
 													React.createElement(
-														"a",
-														{ href: "https://goo.gl/5oNMnW", className: "dflex", target: "_blank" },
-														"English"
-													)
-												)
-											),
-											React.createElement(
-												"div",
-												{ className: "col-12 col-sm-3 dflex" },
-												React.createElement(
-													"button",
-													{ type: "submit", className: "dflex" },
+														"div",
+														{ className: "col-12 col-lg-4 dflex" },
+														React.createElement(
+															"button",
+															{ type: "submit", className: "dflex" },
+															React.createElement(
+																"a",
+																{ href: "https://goo.gl/5oNMnW", className: "dflex", target: "_blank" },
+																"English"
+															)
+														)
+													),
 													React.createElement(
-														"a",
-														{ href: "https://goo.gl/ccGs16", className: "dflex", target: "_blank" },
-														"Russian"
-													)
-												)
-											),
-											React.createElement(
-												"div",
-												{ className: "col-12 col-sm-3 dflex" },
-												React.createElement(
-													"button",
-													{ type: "submit", className: "dflex" },
+														"div",
+														{ className: "col-12 col-lg-4 dflex" },
+														React.createElement(
+															"button",
+															{ type: "submit", className: "dflex" },
+															React.createElement(
+																"a",
+																{ href: "https://goo.gl/ccGs16", className: "dflex", target: "_blank" },
+																"Russian"
+															)
+														)
+													),
 													React.createElement(
-														"a",
-														{ href: "https://goo.gl/", className: "dflex", target: "_blank" },
-														"Ukrainian"
+														"div",
+														{ className: "col-12 col-lg-4 dflex" },
+														React.createElement(
+															"button",
+															{ type: "submit", className: "dflex" },
+															React.createElement(
+																"a",
+																{ href: "https://goo.gl/", className: "dflex", target: "_blank" },
+																"Ukrainian"
+															)
+														)
 													)
 												)
 											)
@@ -52459,7 +52467,7 @@ var Contacts = function (_React$Component) {
 											{ className: "row shadow-aim" },
 											React.createElement(
 												"div",
-												{ className: "col dflex" },
+												{ className: "col-12 col-sm-6 dflex" },
 												React.createElement(
 													"div",
 													{ className: "icon-holder" },
@@ -52473,27 +52481,35 @@ var Contacts = function (_React$Component) {
 											),
 											React.createElement(
 												"div",
-												{ className: "col-12 col-sm-3 dflex" },
+												{ className: "col-12 col-sm-6 dflex" },
 												React.createElement(
-													"button",
-													{ type: "submit", className: "dflex" },
+													"div",
+													{ className: "row" },
 													React.createElement(
-														"a",
-														{ href: "https://markuzone.github.io/React_calculator/", className: "dflex", target: "_blank" },
-														"React Calculator"
-													)
-												)
-											),
-											React.createElement(
-												"div",
-												{ className: "col-12 col-sm-3 dflex" },
-												React.createElement(
-													"button",
-													{ type: "submit", className: "dflex" },
+														"div",
+														{ className: "col-12 col-lg-6 dflex" },
+														React.createElement(
+															"button",
+															{ type: "submit", className: "dflex" },
+															React.createElement(
+																"a",
+																{ href: "https://markuzone.github.io/React_calculator/", className: "dflex", target: "_blank" },
+																"React Calculator"
+															)
+														)
+													),
 													React.createElement(
-														"a",
-														{ href: "https://markuzone.github.io/", className: "dflex", target: "_blank" },
-														"Adaptive Watchshop website"
+														"div",
+														{ className: "col-12 col-lg-6 dflex" },
+														React.createElement(
+															"button",
+															{ type: "submit", className: "dflex" },
+															React.createElement(
+																"a",
+																{ href: "https://markuzone.github.io/", className: "dflex", target: "_blank" },
+																"Adaptive Watchshop website"
+															)
+														)
 													)
 												)
 											)

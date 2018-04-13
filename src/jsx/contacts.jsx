@@ -81,46 +81,54 @@ class Contacts extends React.Component {
 									</li>
 									<li className="xslider xslider6">
 										<div className="row shadow-aim">
-											<div className="col dflex">
+											<div className="col-12 col-sm-6 dflex">
 												<div className="icon-holder">
 													<i className="fab fa-facebook-f"></i>
 												</div>
 												<h4>PDF CVs</h4>
 											</div>
-											<div className="col-12 col-sm-3 dflex">
-												<button type="submit" className="dflex">
-													<a href="https://goo.gl/5oNMnW" className="dflex" target="_blank" >English</a>
-												</button>
-											</div>
-											<div className="col-12 col-sm-3 dflex">
-												<button type="submit" className="dflex">
-													<a href="https://goo.gl/ccGs16" className="dflex" target="_blank" >Russian</a>
-												</button>
-											</div>
-											<div className="col-12 col-sm-3 dflex">
-												<button type="submit" className="dflex">
-													<a href="https://goo.gl/" className="dflex" target="_blank" >Ukrainian</a>
-												</button>
+											<div className="col-12 col-sm-6 dflex">
+												<div className="row" >
+													<div className="col-12 col-lg-4 dflex">
+														<button type="submit" className="dflex">
+															<a href="https://goo.gl/5oNMnW" className="dflex" target="_blank" >English</a>
+														</button>
+													</div>
+													<div className="col-12 col-lg-4 dflex">
+														<button type="submit" className="dflex">
+															<a href="https://goo.gl/ccGs16" className="dflex" target="_blank" >Russian</a>
+														</button>
+													</div>
+													<div className="col-12 col-lg-4 dflex">
+														<button type="submit" className="dflex">
+															<a href="https://goo.gl/" className="dflex" target="_blank" >Ukrainian</a>
+														</button>
+													</div>
+												</div>
 											</div>
 										</div>
 									</li>
 									<li className="xslider xslider7">
 										<div className="row shadow-aim">
-											<div className="col dflex">
+											<div className="col-12 col-sm-6 dflex">
 												<div className="icon-holder">
 													<i className="fab fa-facebook-f"></i>
 												</div>
 												<h4>My other works</h4>
 											</div>
-											<div className="col-12 col-sm-3 dflex">
-												<button type="submit" className="dflex">
-													<a href="https://markuzone.github.io/React_calculator/" className="dflex" target="_blank" >React Calculator</a>
-												</button>
-											</div>
-											<div className="col-12 col-sm-3 dflex">
-												<button type="submit" className="dflex">
-													<a href="https://markuzone.github.io/" className="dflex" target="_blank" >Adaptive Watchshop website</a>
-												</button>
+											<div className="col-12 col-sm-6 dflex">
+												<div className="row" >
+													<div className="col-12 col-lg-6 dflex">
+														<button type="submit" className="dflex">
+															<a href="https://markuzone.github.io/React_calculator/" className="dflex" target="_blank" >React Calculator</a>
+														</button>
+													</div>
+													<div className="col-12 col-lg-6 dflex">
+														<button type="submit" className="dflex">
+															<a href="https://markuzone.github.io/" className="dflex" target="_blank" >Adaptive Watchshop website</a>
+														</button>
+													</div>
+												</div>
 											</div>
 										</div>
 									</li>

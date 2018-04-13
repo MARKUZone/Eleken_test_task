@@ -121,6 +121,8 @@ section {
         margin: 0 20px; }
   section.contacts ul li {
     margin: 15px 0; }
+    section.contacts ul li:nth-of-type(5) .row .col-12:last-of-type, section.contacts ul li:nth-of-type(6) .row .col-12:last-of-type {
+      padding-right: 0; }
     section.contacts ul li .row {
       margin: 15px 0; }
       section.contacts ul li .row div:first-of-type {
@@ -128,18 +130,35 @@ section {
         section.contacts ul li .row div:first-of-type .icon-holder {
           margin: 0; }
           section.contacts ul li .row div:first-of-type .icon-holder svg {
-            margin-bottom: 0;
+            margin-bottom: 3px;
             margin-right: 30px; }
         section.contacts ul li .row div:first-of-type h4 {
-          margin: 0; }
-      section.contacts ul li .row div.col-12 {
+          margin: 0 0 5px;
+          text-align: left; }
+      section.contacts ul li .row div.col-12:not(:first-of-type) {
         justify-content: flex-end;
         margin: 15px 0; }
-        section.contacts ul li .row div.col-12 button {
+        section.contacts ul li .row div.col-12:not(:first-of-type) .row {
+          margin: 0;
+          box-shadow: none;
+          width: 100%; }
+          section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12 {
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0 15px; }
+            section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12 button {
+              margin: 0; }
+              section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12 button a {
+                font-size: 1rem; }
+            section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12:nth-of-type(2) {
+              margin: 10px 0; }
+          section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12:last-of-type {
+            margin-bottom: 0; }
+        section.contacts ul li .row div.col-12:not(:first-of-type) button {
           padding: 0;
           width: 100%;
           max-width: 200px; }
-          section.contacts ul li .row div.col-12 button a {
+          section.contacts ul li .row div.col-12:not(:first-of-type) button a {
             justify-content: center;
             margin: 0;
             text-decoration: none;
@@ -148,8 +167,14 @@ section {
             height: 100%;
             text-transform: uppercase;
             transition: background-color .5s; }
-            section.contacts ul li .row div.col-12 button a:hover {
+            section.contacts ul li .row div.col-12:not(:first-of-type) button a:hover {
               background-color: rgba(128, 128, 128, 0.16); }
+
+@media (min-width: 992px) {
+  section.contacts .row div.col-12 .row div.col-12 {
+    margin: 0 !important; }
+  section.contacts ul li:last-of-type .row div.col-12 .row div.col-12:first-of-type {
+    justify-content: flex-start; } }
 
 @media (max-width: 575px) {
   header nav > a {
@@ -161,13 +186,22 @@ section {
     padding-left: 15px !important; }
   .m0 {
     margin: 0; }
+  section.contacts li:nth-of-type(5) div.col-12:first-of-type, section.contacts li:nth-of-type(6) div.col-12:first-of-type {
+    margin-top: 15px !important;
+    margin-bottom: 0 !important; }
+  section.contacts li:nth-of-type(5) div.col-12:last-of-type, section.contacts li:nth-of-type(6) div.col-12:last-of-type {
+    padding-left: 0; }
   section.contacts li > * > div:first-of-type {
-    justify-content: center !important; }
+    justify-content: center !important;
+    margin: 15px 0; }
     section.contacts li > * > div:first-of-type svg {
       margin-left: 0 !important; }
   section.contacts li > * > div.col-12 {
-    height: 50px !important;
-    justify-content: center !important; }
+    justify-content: center !important;
+    height: 100%;
+    margin-top: 0 !important; }
     section.contacts li > * > div.col-12 button {
       width: 100% !important;
-      transform: translateY(-5px); } }
+      transform: translateY(-5px); }
+    section.contacts li > * > div.col-12 .row .col-12 {
+      justify-content: center !important; } }
