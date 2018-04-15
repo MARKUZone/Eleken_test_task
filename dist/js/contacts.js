@@ -141,7 +141,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder dflex" },
-													React.createElement("img", { src: "/ref/Djinni_Logo.svg", alt: "" })
+													React.createElement("img", { src: "https://markuzone.github.io/Eleken_test_task/ref/Djinni_Logo.svg", alt: "" })
 												),
 												React.createElement(
 													"h4",

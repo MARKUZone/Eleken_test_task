@@ -41780,7 +41780,7 @@ var About = function (_React$Component) {
 											React.createElement(
 												"div",
 												{ className: "col-1 dflex" },
-												React.createElement("i", { className: "fas fa-clipboard-list" })
+												React.createElement("i", { "class": "fas fa-info" })
 											),
 											React.createElement(
 												"div",
@@ -41791,7 +41791,7 @@ var About = function (_React$Component) {
 													React.createElement(
 														"h4",
 														null,
-														"How to Setup"
+														"How to use App"
 													),
 													React.createElement("i", { className: "fas fa-angle-down" })
 												),
@@ -41804,9 +41804,9 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 1:"
+															"1"
 														),
-														" git clone this repo"
+														" Click on Calendar menu item (or menu button if navbar is collapsed)"
 													),
 													React.createElement(
 														"p",
@@ -41814,9 +41814,9 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 2:"
+															"2"
 														),
-														" cd to the cloned"
+														" Click on first day of interested day range and than click on the second one"
 													),
 													React.createElement(
 														"p",
@@ -41824,9 +41824,9 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 3:"
+															"3"
 														),
-														" install the Application"
+														" Under Calendar you will see day range counter which shows current number of days in selected range"
 													)
 												)
 											)
@@ -41841,7 +41841,7 @@ var About = function (_React$Component) {
 											React.createElement(
 												"div",
 												{ className: "col-1 dflex" },
-												React.createElement("i", { className: "fas fa-clipboard-list" })
+												React.createElement("i", { "class": "fas fa-terminal" })
 											),
 											React.createElement(
 												"div",
@@ -41852,7 +41852,7 @@ var About = function (_React$Component) {
 													React.createElement(
 														"h4",
 														null,
-														"How to Setup"
+														"How to install App"
 													),
 													React.createElement("i", { className: "fas fa-angle-down" })
 												),
@@ -41865,9 +41865,24 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 1:"
+															"1"
 														),
-														" git clone this repo"
+														" ",
+														React.createElement(
+															"i",
+															null,
+															React.createElement(
+																"u",
+																null,
+																"git clone"
+															)
+														),
+														" this ",
+														React.createElement(
+															"a",
+															{ href: "https://github.com/MARKUZone/Eleken_test_task" },
+															"repo"
+														)
 													),
 													React.createElement(
 														"p",
@@ -41875,9 +41890,18 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 2:"
+															"2"
 														),
-														" cd to the cloned"
+														" Install App with ",
+														React.createElement(
+															"i",
+															null,
+															React.createElement(
+																"u",
+																null,
+																"npm i"
+															)
+														)
 													),
 													React.createElement(
 														"p",
@@ -41885,9 +41909,37 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 3:"
+															"3"
 														),
-														" install the Application"
+														" Start local server by executing in cmd ",
+														React.createElement(
+															"i",
+															null,
+															React.createElement(
+																"u",
+																null,
+																"npm run server"
+															)
+														)
+													),
+													React.createElement(
+														"p",
+														null,
+														React.createElement(
+															"b",
+															null,
+															"4"
+														),
+														" Open ",
+														React.createElement(
+															"i",
+															null,
+															React.createElement(
+																"u",
+																null,
+																"localhost:3000"
+															)
+														)
 													)
 												)
 											)
@@ -41913,7 +41965,7 @@ var About = function (_React$Component) {
 													React.createElement(
 														"h4",
 														null,
-														"How to Setup"
+														"Technologies used in this App"
 													),
 													React.createElement("i", { className: "fas fa-angle-down" })
 												),
@@ -41926,9 +41978,9 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 1:"
+															"1"
 														),
-														" git clone this repo"
+														" JS, React, React Router"
 													),
 													React.createElement(
 														"p",
@@ -41936,9 +41988,9 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 2:"
+															"2"
 														),
-														" cd to the cloned"
+														" git, gulp, webpack, npm"
 													),
 													React.createElement(
 														"p",
@@ -41946,9 +41998,9 @@ var About = function (_React$Component) {
 														React.createElement(
 															"b",
 															null,
-															"Step 3:"
+															"3"
 														),
-														" install the Application"
+														" SASS, jQuery, bootstrap 4"
 													)
 												)
 											)
@@ -52332,7 +52384,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder dflex" },
-													React.createElement("img", { src: "/ref/Djinni_Logo.svg", alt: "" })
+													React.createElement("img", { src: "https://markuzone.github.io/Eleken_test_task/ref/Djinni_Logo.svg", alt: "" })
 												),
 												React.createElement(
 													"h4",

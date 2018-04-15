@@ -95,6 +95,14 @@ section {
         transition: transform .5s; }
     section.about ul li .row div:not(:nth-child(1)) .hide-block {
       display: none; }
+      section.about ul li .row div:not(:nth-child(1)) .hide-block a {
+        color: var(--blue);
+        text-decoration-color: white;
+        transition: text-decoration-color .5s; }
+        section.about ul li .row div:not(:nth-child(1)) .hide-block a:hover {
+          text-decoration: underline;
+          text-decoration-color: var(--blue);
+          text-decoration-style: dotted; }
   section.calc {
     color: #808080; }
     section.calc .tblock {

@@ -53,7 +53,7 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col dflex">
 												<div className="icon-holder dflex">
-													<img src="/ref/Djinni_Logo.svg" alt="" ></img>
+													<img src="https://markuzone.github.io/Eleken_test_task/ref/Djinni_Logo.svg" alt="" ></img>
 												</div>
 												<h4>djinni.co profile</h4>
 											</div>
