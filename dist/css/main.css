@@ -69,31 +69,32 @@ section {
     text-align: center; }
   section ul {
     padding: 0; }
-    section ul li {
-      list-style: none;
-      margin: 15px 0; }
-      section ul li .row {
+    section ul > li {
+      list-style: none; }
+      section ul > li > .row {
         background-color: #fff;
         box-shadow: 0 0 2px 0px #444;
         border-radius: 4px;
-        transition: box-shadow .5s; }
-        section ul li .row div:nth-child(1) {
-          text-align: center; }
-          section ul li .row div:nth-child(1) > * {
-            font-size: 24px;
-            margin-left: 15px;
-            margin-bottom: 6px; }
-        section ul li .row div:not(:nth-child(1)) a {
-          margin: 1rem auto;
-          justify-content: space-between;
-          text-decoration: none;
+        transition: box-shadow .5s;
+        text-decoration: none; }
+        section ul > li > .row a {
           color: #5f5f5f; }
-          section ul li .row div:not(:nth-child(1)) a:hover {
+          section ul > li > .row a:hover {
             color: #2D2D2D; }
-          section ul li .row div:not(:nth-child(1)) a svg {
-            transition: transform .5s; }
-        section ul li .row div:not(:nth-child(1)) .hide-block {
-          display: none; }
+  section.about ul li {
+    margin: 15px 0; }
+    section.about ul li .row div:nth-child(1) > * {
+      font-size: 24px;
+      margin-left: 15px;
+      margin-bottom: 6px; }
+    section.about ul li .row div:not(:nth-child(1)) a {
+      margin: 1rem auto;
+      justify-content: space-between;
+      text-decoration: none; }
+      section.about ul li .row div:not(:nth-child(1)) a svg {
+        transition: transform .5s; }
+    section.about ul li .row div:not(:nth-child(1)) .hide-block {
+      display: none; }
   section.calc {
     color: #808080; }
     section.calc .tblock {
@@ -119,56 +120,56 @@ section {
       section.calc .col .range-block .counter-placeholder {
         font-size: 50px;
         margin: 0 20px; }
-  section.contacts ul li {
+  section.contacts ul li:nth-of-type(5) .row .col-12:last-of-type, section.contacts ul li:nth-of-type(6) .row .col-12:last-of-type {
+    padding-right: 0; }
+  section.contacts ul li > .row {
     margin: 15px 0; }
-    section.contacts ul li:nth-of-type(5) .row .col-12:last-of-type, section.contacts ul li:nth-of-type(6) .row .col-12:last-of-type {
-      padding-right: 0; }
-    section.contacts ul li .row {
+    section.contacts ul li > .row > div:first-of-type {
+      justify-content: flex-start; }
+      section.contacts ul li > .row > div:first-of-type .icon-holder {
+        margin-right: 15px; }
+        section.contacts ul li > .row > div:first-of-type .icon-holder svg, section.contacts ul li > .row > div:first-of-type .icon-holder img {
+          font-size: 24px;
+          width: 50px; }
+      section.contacts ul li > .row > div:first-of-type h4 {
+        margin: 0 0 5px;
+        text-align: left; }
+    section.contacts ul li > .row > div:nth-of-type(2) {
+      justify-content: flex-start; }
+    section.contacts ul li > .row div.col-12:last-of-type {
+      justify-content: flex-end;
       margin: 15px 0; }
-      section.contacts ul li .row div:first-of-type {
-        justify-content: flex-start; }
-        section.contacts ul li .row div:first-of-type .icon-holder {
-          margin: 0; }
-          section.contacts ul li .row div:first-of-type .icon-holder svg {
-            margin-bottom: 3px;
-            margin-right: 30px; }
-        section.contacts ul li .row div:first-of-type h4 {
-          margin: 0 0 5px;
-          text-align: left; }
-      section.contacts ul li .row div.col-12:not(:first-of-type) {
-        justify-content: flex-end;
-        margin: 15px 0; }
-        section.contacts ul li .row div.col-12:not(:first-of-type) .row {
+      section.contacts ul li > .row div.col-12:last-of-type .row {
+        margin: 0;
+        box-shadow: none;
+        width: 100%; }
+        section.contacts ul li > .row div.col-12:last-of-type .row div.col-12 {
+          justify-content: flex-end;
           margin: 0;
-          box-shadow: none;
-          width: 100%; }
-          section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12 {
-            justify-content: flex-end;
-            margin: 0;
-            padding: 0 15px; }
-            section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12 button {
-              margin: 0; }
-              section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12 button a {
-                font-size: 1rem; }
-            section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12:nth-of-type(2) {
-              margin: 10px 0; }
-          section.contacts ul li .row div.col-12:not(:first-of-type) .row div.col-12:last-of-type {
-            margin-bottom: 0; }
-        section.contacts ul li .row div.col-12:not(:first-of-type) button {
-          padding: 0;
+          padding: 0 15px; }
+          section.contacts ul li > .row div.col-12:last-of-type .row div.col-12 button {
+            margin: 0; }
+            section.contacts ul li > .row div.col-12:last-of-type .row div.col-12 button a {
+              font-size: 1rem; }
+          section.contacts ul li > .row div.col-12:last-of-type .row div.col-12:nth-of-type(2) {
+            margin: 10px 0; }
+        section.contacts ul li > .row div.col-12:last-of-type .row div.col-12:last-of-type {
+          margin-bottom: 0; }
+      section.contacts ul li > .row div.col-12:last-of-type button {
+        padding: 0;
+        width: 100%;
+        max-width: 200px; }
+        section.contacts ul li > .row div.col-12:last-of-type button a {
+          justify-content: center;
+          margin: 0;
+          text-decoration: none;
+          text-align: center;
           width: 100%;
-          max-width: 200px; }
-          section.contacts ul li .row div.col-12:not(:first-of-type) button a {
-            justify-content: center;
-            margin: 0;
-            text-decoration: none;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            text-transform: uppercase;
-            transition: background-color .5s; }
-            section.contacts ul li .row div.col-12:not(:first-of-type) button a:hover {
-              background-color: rgba(128, 128, 128, 0.16); }
+          height: 100%;
+          text-transform: uppercase;
+          transition: background-color .5s; }
+          section.contacts ul li > .row div.col-12:last-of-type button a:hover {
+            background-color: rgba(128, 128, 128, 0.16); }
 
 @media (min-width: 992px) {
   section.contacts .row div.col-12 .row div.col-12 {
@@ -194,8 +195,12 @@ section {
   section.contacts li > * > div:first-of-type {
     justify-content: center !important;
     margin: 15px 0; }
-    section.contacts li > * > div:first-of-type svg {
-      margin-left: 0 !important; }
+    section.contacts li > * > div:first-of-type > .icon-holder {
+      justify-content: flex-start; }
+      section.contacts li > * > div:first-of-type > .icon-holder svg, section.contacts li > * > div:first-of-type > .icon-holder img {
+        margin-bottom: 5px; }
+    section.contacts li > * > div:first-of-type h4 {
+      margin: 0 0 8px !important; }
   section.contacts li > * > div.col-12 {
     justify-content: center !important;
     height: 100%;

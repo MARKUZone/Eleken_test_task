@@ -70,7 +70,7 @@ var Contacts = function (_React$Component) {
 												{ className: "col dflex" },
 												React.createElement(
 													"div",
-													{ className: "icon-holder" },
+													{ className: "icon-holder dflex" },
 													React.createElement("i", { "class": "fas fa-mobile-alt" })
 												),
 												React.createElement(
@@ -105,7 +105,7 @@ var Contacts = function (_React$Component) {
 												{ className: "col dflex" },
 												React.createElement(
 													"div",
-													{ className: "icon-holder" },
+													{ className: "icon-holder dflex" },
 													React.createElement("i", { "class": "fas fa-at" })
 												),
 												React.createElement(
@@ -140,7 +140,7 @@ var Contacts = function (_React$Component) {
 												{ className: "col dflex" },
 												React.createElement(
 													"div",
-													{ className: "icon-holder" },
+													{ className: "icon-holder dflex" },
 													React.createElement("img", { src: "/ref/Djinni_Logo.svg", alt: "" })
 												),
 												React.createElement(
@@ -175,7 +175,7 @@ var Contacts = function (_React$Component) {
 												{ className: "col dflex" },
 												React.createElement(
 													"div",
-													{ className: "icon-holder" },
+													{ className: "icon-holder dflex" },
 													React.createElement("i", { "class": "fab fa-github" })
 												),
 												React.createElement(
@@ -210,7 +210,7 @@ var Contacts = function (_React$Component) {
 												{ className: "col-12 col-sm-6 dflex" },
 												React.createElement(
 													"div",
-													{ className: "icon-holder" },
+													{ className: "icon-holder dflex" },
 													React.createElement("i", { "class": "far fa-file-pdf" })
 												),
 												React.createElement(
@@ -279,7 +279,7 @@ var Contacts = function (_React$Component) {
 												{ className: "col-12 col-sm-6 dflex" },
 												React.createElement(
 													"div",
-													{ className: "icon-holder" },
+													{ className: "icon-holder dflex" },
 													React.createElement("i", { "class": "fas fa-code" })
 												),
 												React.createElement(

@@ -22,7 +22,7 @@ class Contacts extends React.Component {
 									<li className="xslider xslider2">
 										<div className="row shadow-aim">
 											<div className="col dflex">
-												<div className="icon-holder">
+												<div className="icon-holder dflex">
 													<i class="fas fa-mobile-alt"></i>
 												</div>
 												<h4>Phone</h4>
@@ -37,7 +37,7 @@ class Contacts extends React.Component {
 									<li className="xslider xslider3">
 										<div className="row shadow-aim">
 											<div className="col dflex">
-												<div className="icon-holder">
+												<div className="icon-holder dflex">
 													<i class="fas fa-at"></i>
 												</div>
 												<h4>Email</h4>
@@ -52,7 +52,7 @@ class Contacts extends React.Component {
 									<li className="xslider xslider4">
 										<div className="row shadow-aim">
 											<div className="col dflex">
-												<div className="icon-holder">
+												<div className="icon-holder dflex">
 													<img src="/ref/Djinni_Logo.svg" alt="" ></img>
 												</div>
 												<h4>djinni.co profile</h4>
@@ -67,7 +67,7 @@ class Contacts extends React.Component {
 									<li className="xslider xslider5">
 										<div className="row shadow-aim">
 											<div className="col dflex">
-												<div className="icon-holder">
+												<div className="icon-holder dflex">
 													<i class="fab fa-github"></i>
 												</div>
 												<h4>GitHub profile</h4>
@@ -82,7 +82,7 @@ class Contacts extends React.Component {
 									<li className="xslider xslider6">
 										<div className="row shadow-aim">
 											<div className="col-12 col-sm-6 dflex">
-												<div className="icon-holder">
+												<div className="icon-holder dflex">
 													<i class="far fa-file-pdf"></i>
 												</div>
 												<h4>PDF CVs</h4>
@@ -111,7 +111,7 @@ class Contacts extends React.Component {
 									<li className="xslider xslider7">
 										<div className="row shadow-aim">
 											<div className="col-12 col-sm-6 dflex">
-												<div className="icon-holder">
+												<div className="icon-holder dflex">
 													<i class="fas fa-code"></i>
 												</div>
 												<h4>My other works</h4>
