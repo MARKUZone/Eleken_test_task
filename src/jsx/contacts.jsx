@@ -59,7 +59,7 @@ class Contacts extends React.Component {
 											</div>
 											<div className="col-12 col-sm dflex">
 												<button type="submit" className="dflex">
-													<a href="put here link!" className="dflex" target="_blank" >Visit page</a>
+													<a href="https://djinni.co/q/1c496021/" className="dflex" target="_blank" >Visit page</a>
 												</button>
 											</div>
 										</div>

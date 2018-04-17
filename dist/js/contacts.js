@@ -157,7 +157,7 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "put here link!", className: "dflex", target: "_blank" },
+														{ href: "https://djinni.co/q/1c496021/", className: "dflex", target: "_blank" },
 														"Visit page"
 													)
 												)
