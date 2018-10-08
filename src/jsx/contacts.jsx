@@ -89,21 +89,21 @@ class Contacts extends React.Component {
 											</div>
 											<div className="col-12 col-sm-6 dflex">
 												<div className="row" >
-													<div className="col-12 col-lg-4 dflex">
+													<div className="col-12 col-lg-6 dflex">
 														<button type="submit" className="dflex">
-															<a href="https://goo.gl/5oNMnW" className="dflex" target="_blank" >English</a>
+															<a href="https://goo.gl/RZL54X" className="dflex" target="_blank" >English</a>
 														</button>
 													</div>
-													<div className="col-12 col-lg-4 dflex">
+													<div className="col-12 col-lg-6 dflex">
 														<button type="submit" className="dflex">
-															<a href="https://goo.gl/ccGs16" className="dflex" target="_blank" >Russian</a>
+															<a href="https://goo.gl/ZfCvwy" className="dflex" target="_blank" >Russian</a>
 														</button>
 													</div>
-													<div className="col-12 col-lg-4 dflex">
+													{/*<div className="col-12 col-lg-4 dflex">
 														<button type="submit" className="dflex">
 															<a href="https://goo.gl/aAZbsM" className="dflex" target="_blank" >Ukrainian</a>
 														</button>
-													</div>
+													</div>*/}
 												</div>
 											</div>
 										</div>

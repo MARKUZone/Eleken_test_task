@@ -181,9 +181,7 @@ section {
 
 @media (min-width: 992px) {
   section.contacts .row div.col-12 .row div.col-12 {
-    margin: 0 !important; }
-  section.contacts ul li:last-of-type .row div.col-12 .row div.col-12:first-of-type {
-    justify-content: flex-start; } }
+    margin: 0 !important; } }
 
 @media (max-width: 575px) {
   header nav > a {

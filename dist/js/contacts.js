@@ -227,40 +227,27 @@ var Contacts = function (_React$Component) {
 													{ className: "row" },
 													React.createElement(
 														"div",
-														{ className: "col-12 col-lg-4 dflex" },
+														{ className: "col-12 col-lg-6 dflex" },
 														React.createElement(
 															"button",
 															{ type: "submit", className: "dflex" },
 															React.createElement(
 																"a",
-																{ href: "https://goo.gl/5oNMnW", className: "dflex", target: "_blank" },
+																{ href: "https://goo.gl/RZL54X", className: "dflex", target: "_blank" },
 																"English"
 															)
 														)
 													),
 													React.createElement(
 														"div",
-														{ className: "col-12 col-lg-4 dflex" },
+														{ className: "col-12 col-lg-6 dflex" },
 														React.createElement(
 															"button",
 															{ type: "submit", className: "dflex" },
 															React.createElement(
 																"a",
-																{ href: "https://goo.gl/ccGs16", className: "dflex", target: "_blank" },
+																{ href: "https://goo.gl/ZfCvwy", className: "dflex", target: "_blank" },
 																"Russian"
-															)
-														)
-													),
-													React.createElement(
-														"div",
-														{ className: "col-12 col-lg-4 dflex" },
-														React.createElement(
-															"button",
-															{ type: "submit", className: "dflex" },
-															React.createElement(
-																"a",
-																{ href: "https://goo.gl/aAZbsM", className: "dflex", target: "_blank" },
-																"Ukrainian"
 															)
 														)
 													)
