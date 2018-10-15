@@ -52384,7 +52384,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder dflex" },
-													React.createElement("img", { src: "/ref/Djinni_Logo.svg", alt: "" })
+													React.createElement("img", { src: "https://nikitavolkov87.github.io/Calendar_Day_Diff_App-React-/ref/Djinni_Logo.svg", alt: "" })
 												),
 												React.createElement(
 													"h4",

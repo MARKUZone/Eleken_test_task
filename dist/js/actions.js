@@ -17,7 +17,7 @@ function linkGen() {
 		elem.setAttribute("href", "http://localhost:3000/");
 	} else {
 		elem.setAttribute("title", "click to reload page");
-		elem.setAttribute("href", "https://markuzone.github.io/Eleken_test_task/");
+		elem.setAttribute("href", "https://NikitaVolkov87.github.io/Calendar_Day_Diff_App-React-/");
 	}
 }
 window.onload = () => linkGen();
