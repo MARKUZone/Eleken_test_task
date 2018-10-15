@@ -23,4 +23,6 @@ Select in app's calendar start date and end date to get day range count.
 - React Router
 - third-party package (rc-calendar) from npm
 - Bootstrap
+- webpack
+- SASS
 - animation
