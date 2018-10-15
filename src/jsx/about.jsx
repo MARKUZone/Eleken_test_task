@@ -48,7 +48,7 @@ class About extends React.Component {
 													<i className="fas fa-angle-down"></i>
 												</a>
 												<div className="hide-block">
-													<p><b>1</b> <i><u>git clone</u></i> this <a href="https://github.com/MARKUZone/Eleken_test_task">repo</a></p>
+													<p><b>1</b> <i><u>git clone</u></i> this <a href="https://github.com/NikitaVolkov87/Calendar_Day_Diff_App-React-">repo</a></p>
 													<p><b>2</b> Install App with <i><u>npm i</u></i></p>
 													<p><b>3</b> Start local server by executing in cmd <i><u>npm run server</u></i></p>
 													<p><b>4</b> Open <i><u>localhost:3000</u></i></p>
