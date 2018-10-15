@@ -141,7 +141,7 @@ var Contacts = function (_React$Component) {
 												React.createElement(
 													"div",
 													{ className: "icon-holder dflex" },
-													React.createElement("img", { src: "https://markuzone.github.io/Eleken_test_task/ref/Djinni_Logo.svg", alt: "" })
+													React.createElement("img", { src: "/ref/Djinni_Logo.svg", alt: "" })
 												),
 												React.createElement(
 													"h4",
@@ -192,7 +192,7 @@ var Contacts = function (_React$Component) {
 													{ type: "submit", className: "dflex" },
 													React.createElement(
 														"a",
-														{ href: "https://github.com/MARKUZone", className: "dflex", target: "_blank" },
+														{ href: "https://github.com/NikitaVolkov87", className: "dflex", target: "_blank" },
 														"Visit page"
 													)
 												)
@@ -248,62 +248,6 @@ var Contacts = function (_React$Component) {
 																"a",
 																{ href: "https://goo.gl/ZfCvwy", className: "dflex", target: "_blank" },
 																"Russian"
-															)
-														)
-													)
-												)
-											)
-										)
-									),
-									React.createElement(
-										"li",
-										{ className: "xslider xslider7" },
-										React.createElement(
-											"div",
-											{ className: "row shadow-aim" },
-											React.createElement(
-												"div",
-												{ className: "col-12 col-sm-6 dflex" },
-												React.createElement(
-													"div",
-													{ className: "icon-holder dflex" },
-													React.createElement("i", { "class": "fas fa-code" })
-												),
-												React.createElement(
-													"h4",
-													null,
-													"My other works"
-												)
-											),
-											React.createElement(
-												"div",
-												{ className: "col-12 col-sm-6 dflex" },
-												React.createElement(
-													"div",
-													{ className: "row" },
-													React.createElement(
-														"div",
-														{ className: "col-12 col-lg-6 dflex" },
-														React.createElement(
-															"button",
-															{ type: "submit", className: "dflex" },
-															React.createElement(
-																"a",
-																{ href: "https://markuzone.github.io/React_calculator/", className: "dflex", target: "_blank" },
-																"React Calculator"
-															)
-														)
-													),
-													React.createElement(
-														"div",
-														{ className: "col-12 col-lg-6 dflex" },
-														React.createElement(
-															"button",
-															{ type: "submit", className: "dflex" },
-															React.createElement(
-																"a",
-																{ href: "https://markuzone.github.io/", className: "dflex", target: "_blank" },
-																"Adaptive Watchshop website"
 															)
 														)
 													)

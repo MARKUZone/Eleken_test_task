@@ -53,7 +53,7 @@ class Contacts extends React.Component {
 										<div className="row shadow-aim">
 											<div className="col dflex">
 												<div className="icon-holder dflex">
-													<img src="https://markuzone.github.io/Eleken_test_task/ref/Djinni_Logo.svg" alt="" ></img>
+													<img src="/ref/Djinni_Logo.svg" alt="" ></img>
 												</div>
 												<h4>djinni.co profile</h4>
 											</div>
@@ -74,7 +74,7 @@ class Contacts extends React.Component {
 											</div>
 											<div className="col-12 col-sm dflex">
 												<button type="submit" className="dflex">
-													<a href="https://github.com/MARKUZone" className="dflex" target="_blank" >Visit page</a>
+													<a href="https://github.com/NikitaVolkov87" className="dflex" target="_blank" >Visit page</a>
 												</button>
 											</div>
 										</div>
@@ -108,7 +108,7 @@ class Contacts extends React.Component {
 											</div>
 										</div>
 									</li>
-									<li className="xslider xslider7">
+									{/*<li className="xslider xslider7">
 										<div className="row shadow-aim">
 											<div className="col-12 col-sm-6 dflex">
 												<div className="icon-holder dflex">
@@ -131,7 +131,7 @@ class Contacts extends React.Component {
 												</div>
 											</div>
 										</div>
-									</li>
+									</li>*/}
 								</ul>
 							</div>
 						</div>
