@@ -41880,7 +41880,7 @@ var About = function (_React$Component) {
 														" this ",
 														React.createElement(
 															"a",
-															{ href: "https://github.com/MARKUZone/Eleken_test_task" },
+															{ href: "https://github.com/NikitaVolkov87/Calendar_Day_Diff_App-React-" },
 															"repo"
 														)
 													),
