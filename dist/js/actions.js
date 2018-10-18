@@ -14,7 +14,7 @@ function linkGen() {
 	const elem = document.getElementsByClassName("navbar-brand")[0];
 	if ( window.location.href.slice(7, 16) === "localhost" ) {
 		elem.setAttribute("title", "reload at localhost");
-		elem.setAttribute("href", "http://localhost:3000/");
+		elem.setAttribute("href", window.location.href.slice(0, 22));
 	} else {
 		elem.setAttribute("title", "click to reload page");
 		elem.setAttribute("href", "https://NikitaVolkov87.github.io/Calendar_Day_Diff_App-React-/");
